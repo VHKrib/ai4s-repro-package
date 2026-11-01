@@ -1,0 +1,10 @@
+﻿ligand,receptor,affinity_kcal_mol,ligand_efficiency,heavy_atoms,centroid_distance_to_crystal_A,site_overlap_fraction,min_distance_to_Asp25_oxygens,asp25_contacts_under_3.5A,delta_affinity_vs_WT
+darunavir,WT,-9.247,0.243,38,1.64,0.84,2.86,2,0.0
+darunavir,D30N,-9.228,0.243,38,0.69,0.87,2.71,4,0.019
+darunavir,G48V,-8.564,0.225,38,0.31,0.84,3.0,2,0.683
+darunavir,I50V,-8.684,0.229,38,1.64,0.87,2.94,4,0.563
+darunavir,I54V,-9.351,0.246,38,1.67,0.87,2.99,4,-0.104
+darunavir,L76V,-9.004,0.237,38,0.69,0.79,5.01,0,0.243
+darunavir,V82A,-9.107,0.24,38,1.63,0.87,2.96,4,0.14
+darunavir,I84V,-8.911,0.234,38,1.61,0.84,2.96,4,0.336
+darunavir,L90M,-8.618,0.227,38,0.85,0.82,4.54,0,0.629

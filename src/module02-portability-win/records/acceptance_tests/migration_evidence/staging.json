@@ -1,0 +1,37 @@
+{
+  "stage": "before_any_scientific_step",
+  "files": [
+    {
+      "path": "request.json",
+      "sha256": "4213b543955f6937e7529c025816734b3b7490c1541dbac9922f8d6c6850aa50",
+      "bytes": 1332
+    },
+    {
+      "path": "profile.json",
+      "sha256": "90dec5aa54cf592fefcac449b62547e24859e5b8636238c0818ab96eee45ba10",
+      "bytes": 2495
+    },
+    {
+      "path": "original/6VGL.cif",
+      "sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+      "bytes": 1150853
+    },
+    {
+      "path": "original/JAK2_O60674.fasta",
+      "sha256": "831aa8f7e0f2fae67653de02c1c3dfdba172afdc41d3512581be508774171bb4",
+      "bytes": 1244
+    },
+    {
+      "path": "original/Stage2Handoff_01_updated_20261027.md",
+      "sha256": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f",
+      "bytes": 3966
+    },
+    {
+      "path": "original/RXT_CCD.cif",
+      "sha256": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc",
+      "bytes": 9506
+    }
+  ],
+  "prepared_products_present": false,
+  "raw_input_and_frozen_definition_only": true
+}

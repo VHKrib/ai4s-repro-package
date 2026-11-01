@@ -1,0 +1,43 @@
+%% 阶段 03 agent 的工作流，与流程图 03 区块逐框对应
+%% 绿色实线 = 已实现；橙色虚线 = 图里有、当前未实现或只部分实现
+
+flowchart TD
+    IN["输入契约<br/>candidates / receptors / poses / panel"] --> B
+
+    B{"01 方法适用性与参考对照<br/>applicability"}
+    B -->|"有参考：红对接 RMSD / 已知药物次序 /<br/>突变趋势 / 刚柔方法一致性"| BOK["reference_check.csv<br/>pass / warn"]
+    B -->|"无参考或数据不足"| BGAP["记录校验缺口<br/>status = gap<br/>U-GAP-*"]
+    BOK --> C
+    BGAP --> C
+
+    C["02 结合姿势 / 复合物建模<br/>poses"]
+    C --> C1["分子对接<br/>vina 适配器"]
+    C --> C2["复合物导入<br/>af3 适配器"]
+    C1 --> D["姿势 + 对接分 + 结构文件<br/>pose_metrics.csv"]
+    C2 --> D2["置信度 only<br/>affinity 为空"]
+    D --> E
+    D2 --> E
+
+    E["04 几何 QC<br/>位点重叠 / 催化接触 /<br/>冲突 / 极性接触 / 最佳姿势"]
+    E --> F["05 综合评估与排序<br/>姿势 + 亲和力 + 一致性 + 成药性 + 耐药"]
+
+    F --> G{"06 达到预设计算筛选标准？"}
+    G -->|"是"| H["07 计算阶段输出<br/>候选清单 / 预测依据 /<br/>候选结构 / 未解决不确定性"]
+    G -->|"否：可修复"| I["revise<br/>返回阶段 02<br/>保留失败原因"]
+    G -->|"参考失败或仅置信度"| J["needs_review<br/>人工复核"]
+
+    F -.->|"可选 · 未实现"| MD["MD 模拟<br/>GROMACS / OpenMM<br/>只补动态证据"]
+    MD -.-> F
+
+    P["P2Rank / fpocket<br/>位点预测"] -.->|"未实现<br/>对接盒由输入给定"| C
+    X["ChimeraX<br/>检测 / 测量 / 可视化"] -.->|"未调用<br/>只输出结构与 CSV"| E
+
+    classDef done fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef partial fill:#fff3e0,stroke:#ef6c00,color:#e65100,stroke-dasharray: 5 3
+    classDef decision fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef output fill:#f3e5f5,stroke:#6a1b9a,color:#4a148c
+
+    class IN,B,BOK,C,C1,C2,D,D2,E,F,H done
+    class BGAP,I,J partial
+    class G decision
+    class MD,P,X partial

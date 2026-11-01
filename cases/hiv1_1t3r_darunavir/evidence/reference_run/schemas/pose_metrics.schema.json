@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "pose_metrics",
+  "description": "每个姿势的几何指标与选中标记。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "receptor_id",
+      "protocol",
+      "protocol_role",
+      "engine",
+      "pose_index",
+      "selected",
+      "geometry_source"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "protocol": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "protocol_role": {
+        "enum": [
+          "primary",
+          "sensitivity",
+          "reference"
+        ]
+      },
+      "engine": {
+        "enum": [
+          "vina",
+          "af3",
+          "replay",
+          "external"
+        ]
+      },
+      "pose_index": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "affinity_kcal_mol": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "heavy_atoms": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "ligand_efficiency": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "centroid_distance_to_crystal_A": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "site_overlap_fraction": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "min_distance_to_Asp25_oxygens": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "asp25_contacts_under_3.5A": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "clash_pairs": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "polar_contacts": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "pose_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "selected": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "selection_reason": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "geometry_source": {
+        "enum": [
+          "table",
+          "sdf",
+          "af3_confidence",
+          "none"
+        ]
+      },
+      "confidence_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "confidence_type": {
+        "enum": [
+          "ranking_score",
+          "iptm",
+          "ptm",
+          null
+        ]
+      }
+    }
+  }
+}

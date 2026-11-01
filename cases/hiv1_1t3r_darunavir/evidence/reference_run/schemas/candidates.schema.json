@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "candidates",
+  "description": "候选/对照清单。role=candidate 参与排序，control 只做方法对照。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "name",
+      "role"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "项目内唯一 ID"
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "role": {
+        "enum": [
+          "candidate",
+          "control",
+          "reference"
+        ]
+      },
+      "smiles": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "source": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "chemotype": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "heavy_atoms": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "ligand_sdf_path": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ligand_pdbqt_path": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "availability": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "synthesizability": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "solubility_risk": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "selectivity_risk": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

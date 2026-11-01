@@ -1,0 +1,21 @@
+# envs/py3119-science — Python 3.11.9
+# Exact `pip freeze` of the environment every scientific number in this package
+# was produced with (Windows 11 x64). Install with setup_envs.ps1.
+#
+# Why each package is here:
+#   rdkit    ligand graph/coordinates, conformers, RDKit GetBestRMS redock metric
+#   meeko    ligand + receptor PDBQT preparation (mk_prepare_ligand / _receptor / mk_export)
+#   gemmi    mmCIF/PDB parsing for receptor and ligand extraction
+#   numpy    numeric dependency of rdkit/meeko
+#   scipy    dependency of meeko
+#   pillow   dependency of rdkit's drawing module (pulled in by the wheel)
+#   tqdm     progress bars in meeko
+#   colorama dependency of tqdm on Windows
+colorama==0.4.6
+gemmi==0.7.5
+meeko==0.8.0
+numpy==2.4.6
+pillow==13.0.0
+rdkit==2026.9.1
+scipy==1.17.1
+tqdm==4.70.1

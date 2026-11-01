@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "A_raw_to_complete",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/scripts/run_prepare.py",
+        "--request",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/cases/jak2_6vgl.json",
+        "--out",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001"
+      ],
+      "cwd": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "status": "READY_FOR_03"
+    },
+    {
+      "case": "A_stdlib_receiver",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-S",
+        "-B",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/scripts/check_integrity.py",
+        "--root",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001"
+      ],
+      "cwd": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "all_file_hashes_unchanged": true,
+      "status": "INTEGRITY_PASS"
+    },
+    {
+      "case": "A_full_science_receiver",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/scripts/check_science.py",
+        "--root",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001"
+      ],
+      "cwd": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "all_file_hashes_unchanged": true,
+      "status": "READY_FOR_03"
+    },
+    {
+      "case": "B_path_migration",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/jak2_6vgl.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/results with spaces/run 002"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "status": "READY_FOR_03"
+    },
+    {
+      "case": "B_stdlib_receiver",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-S",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/check_integrity.py",
+        "--root",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/results with spaces/run 002"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "all_file_hashes_unchanged": true,
+      "status": "INTEGRITY_PASS"
+    },
+    {
+      "case": "C_wrong_chain",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/C_wrong_chain.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/C_wrong_chain"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "status": "BLOCKED"
+    },
+    {
+      "case": "C_wrong_source_hash",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/C_wrong_source_hash.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/C_wrong_source_hash"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "status": "FAIL"
+    },
+    {
+      "case": "C_missing_sequence",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/C_missing_sequence.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/C_missing_sequence"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "status": "BLOCKED"
+    },
+    {
+      "case": "C_unapproved_profile",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/unapproved.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/profile"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "status": "BLOCKED"
+    },
+    {
+      "case": "missing_dependencies_explicit",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-S",
+        "-B",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/scripts/run_prepare.py",
+        "--request",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/jak2_6vgl.json",
+        "--out",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/no_site"
+      ],
+      "cwd": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "status": "FAIL"
+    },
+    {
+      "case": "D_tampered_output",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-S",
+        "-B",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/scripts/check_integrity.py",
+        "--root",
+        "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/tampered result"
+      ],
+      "cwd": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "all_file_hashes_unchanged": true,
+      "status": "FAIL"
+    },
+    {
+      "case": "E_existing_output",
+      "command": [
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+        "-B",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/scripts/run_prepare.py",
+        "--request",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/cases/jak2_6vgl.json",
+        "--out",
+        "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001"
+      ],
+      "cwd": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "status": "FAIL"
+    }
+  ],
+  "normal_run": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001",
+  "migration_run": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/results with spaces/run 002",
+  "temporary_root": "/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474",
+  "raw_data_rebuild_demonstrated": true,
+  "core_R1_files_byte_identical": 10,
+  "core_migration_files_byte_identical": 10,
+  "scientific_and_runtime_metadata_evaluated_separately": true,
+  "existing_output_unchanged": true,
+  "third_party_science_imports_not_needed_for_integrity": true
+}

@@ -1,0 +1,9 @@
+{
+  "status": "READY_FOR_03",
+  "exit_code": 0,
+  "job_id": "A4S-02-MODULE-001-JAK2-001",
+  "result": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "integrity_status": "INTEGRITY_PASS"
+}

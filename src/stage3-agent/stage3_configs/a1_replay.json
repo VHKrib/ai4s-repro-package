@@ -1,0 +1,100 @@
+{
+  "schema_version": "stage3-config/1",
+  "case_id": "a1_replay",
+  "target": {
+    "name": "HIV-1 protease",
+    "uniprot": "P04585"
+  },
+  "inputs": {
+    "candidates": "stage3_cases/a1_replay/candidates.csv",
+    "receptors": "stage3_cases/a1_replay/receptors.csv",
+    "poses": "stage3_cases/a1_replay/poses.csv",
+    "panel": "stage3_cases/a1_replay/panel.csv",
+    "reference_poses": "stage3_cases/a1_replay/reference_poses.csv"
+  },
+  "engine": {
+    "name": "replay",
+    "options": {}
+  },
+  "reference": {
+    "checks": [
+      {
+        "id": "redock_saquinavir",
+        "type": "redock_rmsd",
+        "candidate_id": "saquinavir",
+        "receptor_id": "WT",
+        "threshold": 2.0,
+        "required": true,
+        "impact": "blocks_advance",
+        "note": "姿势可信度门槛：共晶配体重对接 RMSD <= 2 A"
+      },
+      {
+        "id": "control_order",
+        "type": "control_ordering",
+        "receptor_id": "WT",
+        "expected": ["darunavir", "saquinavir"],
+        "required": true,
+        "impact": "limits_ranking",
+        "note": "已知效价：darunavir (Ki 0.016 nM) 强于 saquinavir；用于检验跨分子排序"
+      },
+      {
+        "id": "saq_mutation_trend",
+        "type": "mutation_trend",
+        "candidate_id": "saquinavir",
+        "threshold": 0.3,
+        "required": true,
+        "impact": "limits_ranking",
+        "note": "已知耐药位点的柔性侧链 delta 应高于其余位点"
+      },
+      {
+        "id": "drv_mutation_trend",
+        "type": "mutation_trend",
+        "candidate_id": "darunavir",
+        "threshold": 0.3,
+        "required": true,
+        "impact": "limits_ranking",
+        "note": "darunavir 的已知耐药位点是否复现；不复现则说明 panel 有假阳性"
+      },
+      {
+        "id": "saq_method_agreement",
+        "type": "method_agreement",
+        "candidate_id": "saquinavir",
+        "threshold": 0.5,
+        "required": false,
+        "impact": "limits_ranking",
+        "note": "刚性 vs 柔性侧链的突变 delta 是否同向"
+      },
+      {
+        "id": "protocol_consistency",
+        "type": "protocol_consistency",
+        "required": true,
+        "impact": "limits_ranking",
+        "note": "排序只能使用单一 primary 协议"
+      }
+    ]
+  },
+  "criteria": {
+    "primary_receptor": "WT",
+    "min_site_overlap": 0.70,
+    "min_catalytic_contacts": 1,
+    "max_clashes": 0,
+    "max_affinity_kcal_mol": -7.0,
+    "min_ligand_efficiency": 0.18,
+    "max_flex_delta": 1.0,
+    "max_consensus_std": 0.08,
+    "require_reference_pass": true,
+    "allow_af3_only_advance": false
+  },
+  "weights": {
+    "pose": 0.30,
+    "affinity": 0.20,
+    "consistency": 0.20,
+    "developability": 0.15,
+    "resistance": 0.15
+  },
+  "tiers": {
+    "A": 0.70,
+    "B": 0.55
+  },
+  "runs_dir": "stage3_runs"
+}

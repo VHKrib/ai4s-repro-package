@@ -1,0 +1,203 @@
+{
+  "schema_version": "stage3-state/1",
+  "pipeline_version": "stage3/0.1.0",
+  "run_id": "hiv1_1t3r_darunavir-20261030-225324",
+  "case_id": "hiv1_1t3r_darunavir",
+  "status": "completed",
+  "started_at": "2026-10-30T22:53:24+08:00",
+  "updated_at": "2026-10-30T22:53:58+08:00",
+  "finished_at": "2026-10-30T22:53:58+08:00",
+  "pid": 36848,
+  "config_path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\stage3_config_hiv1_1t3r_darunavir.json",
+  "config_sha256": "8a4dd5da0966e951851253f0374ee760652a0da26bc3d6a1305eb1b94dd846ed",
+  "params": {
+    "engine": "vina",
+    "engine_options": {
+      "exhaustiveness": 8,
+      "n_poses": 9,
+      "seed": 42,
+      "cpu": 4,
+      "protocol_suffix": "rigid",
+      "reference_ligand": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+      "catalytic_selection": [
+        {
+          "resname": "ASP",
+          "resseq": 25,
+          "atoms": [
+            "OD1",
+            "OD2"
+          ]
+        }
+      ]
+    },
+    "criteria": {
+      "primary_receptor": "HIV1_1T3R",
+      "min_site_overlap": 0.7,
+      "min_catalytic_contacts": 0,
+      "max_clashes": 0,
+      "max_affinity_kcal_mol": -7.0,
+      "min_ligand_efficiency": 0.18,
+      "max_flex_delta": 1.0,
+      "max_consensus_std": 0.08,
+      "require_reference_pass": false,
+      "allow_af3_only_advance": false
+    },
+    "weights": {
+      "pose": 0.3,
+      "affinity": 0.2,
+      "consistency": 0.2,
+      "developability": 0.15,
+      "resistance": 0.15
+    },
+    "target": {
+      "name": "HIV-1 protease WT dimer (1T3R, 1.20 A)",
+      "uniprot": "P04585"
+    }
+  },
+  "stages": [
+    {
+      "index": 1,
+      "id": "intake",
+      "label": "输入契约校验",
+      "status": "completed",
+      "progress": {
+        "done": 5,
+        "total": 5,
+        "unit": "tables"
+      },
+      "message": "1 候选 · 1 受体 · 0 姿势",
+      "started_at": "2026-10-30T22:53:24+08:00",
+      "finished_at": "2026-10-30T22:53:24+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\01_intake.json",
+      "fingerprint": "1a22ed77ce16e9caf7fde3f2fb7cfceecff100c5a61db5ebcf1699420fe774d2"
+    },
+    {
+      "index": 2,
+      "id": "applicability",
+      "label": "方法适用性与参考对照",
+      "status": "completed",
+      "progress": {
+        "done": 1,
+        "total": 1,
+        "unit": "checks"
+      },
+      "message": "参考对照通过（pass=1）",
+      "started_at": "2026-10-30T22:53:24+08:00",
+      "finished_at": "2026-10-30T22:53:24+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\02_applicability.json",
+      "fingerprint": "1cfd86a375478642a7e5d8c3491c43c7c0604b8f4a4d3b4c0561f49f9330564d"
+    },
+    {
+      "index": 3,
+      "id": "poses",
+      "label": "结合姿势 / 复合物数据",
+      "status": "completed",
+      "progress": {
+        "done": 1,
+        "total": 1,
+        "unit": "pairs"
+      },
+      "message": "9 姿势 · 0 条不确定性",
+      "started_at": "2026-10-30T22:53:24+08:00",
+      "finished_at": "2026-10-30T22:53:58+08:00",
+      "duration_s": 34.0,
+      "artifact": "artifacts\\03_poses.json",
+      "fingerprint": "f979f7cc8ed98bbe5710269320e1d938f18d122f538380945f0bb22029a2f8ff"
+    },
+    {
+      "index": 4,
+      "id": "qc",
+      "label": "姿势几何与一致性检查",
+      "status": "completed",
+      "progress": {
+        "done": 9,
+        "total": 9,
+        "unit": "poses"
+      },
+      "message": "1 个选中姿势 · 1 行突变矩阵",
+      "started_at": "2026-10-30T22:53:58+08:00",
+      "finished_at": "2026-10-30T22:53:58+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\04_qc.json",
+      "fingerprint": "8ccc5959a7b6b88b4740abb5a126dd4190ac08c263280a05bb8375d6a54ae7e8"
+    },
+    {
+      "index": 5,
+      "id": "rank",
+      "label": "综合评估与候选排序",
+      "status": "completed",
+      "progress": {
+        "done": 1,
+        "total": 1,
+        "unit": "candidates"
+      },
+      "message": "1 个候选已排序",
+      "started_at": "2026-10-30T22:53:58+08:00",
+      "finished_at": "2026-10-30T22:53:58+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\05_rank.json",
+      "fingerprint": "f04359a4d865f651ecf05bd98a57e83f1de14274f175d33856acceda495c7f16"
+    },
+    {
+      "index": 6,
+      "id": "decide",
+      "label": "判据与决策",
+      "status": "completed",
+      "progress": {
+        "done": 1,
+        "total": 1,
+        "unit": "candidates"
+      },
+      "message": "advance=1",
+      "started_at": "2026-10-30T22:53:58+08:00",
+      "finished_at": "2026-10-30T22:53:58+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\06_decide.json",
+      "fingerprint": "6b5bcdaa340470fea55dedcb1a6fb2a3f20a1f7e2f6bbeb4cad40f93eb7f4d79"
+    },
+    {
+      "index": 7,
+      "id": "export",
+      "label": "输出与清单",
+      "status": "completed",
+      "progress": {
+        "done": 7,
+        "total": 7,
+        "unit": "files"
+      },
+      "message": "固定格式产物已写出并通过自检",
+      "started_at": "2026-10-30T22:53:58+08:00",
+      "finished_at": "2026-10-30T22:53:58+08:00",
+      "duration_s": 0.0,
+      "artifact": "artifacts\\07_export.json",
+      "fingerprint": "6b327232fe014edd5066d8c1a3668c5237e5ec9ced789b7290b8e4f3cf97383f"
+    }
+  ],
+  "counters": {
+    "candidates": 1,
+    "controls": 0,
+    "receptors": 1,
+    "poses": 0,
+    "primary_receptor": "HIV1_1T3R",
+    "reference_status": "pass",
+    "pose_rows": 9,
+    "selected_poses": 1,
+    "matrix_rows": 1,
+    "ranked_candidates": 1,
+    "decision_advance": 1
+  },
+  "errors": [],
+  "outputs": {
+    "reference_check": "outputs\\reference_check.csv",
+    "pose_metrics": "outputs\\pose_metrics.csv",
+    "receptor_matrix": "outputs\\receptor_matrix.csv",
+    "candidates_ranked": "outputs\\candidates_ranked.csv",
+    "decisions": "outputs\\decisions.csv",
+    "uncertainties": "outputs\\uncertainties.csv",
+    "report": "outputs\\stage3_report.md",
+    "manifest": "manifest.json"
+  },
+  "summary": "advance=1"
+}

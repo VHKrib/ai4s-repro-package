@@ -1,0 +1,154 @@
+{
+  "stage": "intake",
+  "fingerprint": "1a22ed77ce16e9caf7fde3f2fb7cfceecff100c5a61db5ebcf1699420fe774d2",
+  "candidates": [
+    {
+      "candidate_id": "DRV",
+      "name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+      "role": "candidate",
+      "smiles": "CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CO[C@H]2OCC[C@H]21)S(=O)(=O)c1ccc(N)cc1",
+      "source": "1T3R HETATM 017 (co-crystal) + PubChem CID 213039 (bond template)",
+      "chemotype": "hydroxyethylamine sulfonamide protease inhibitor",
+      "heavy_atoms": "38",
+      "ligand_sdf_path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+      "ligand_pdbqt_path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\darunavir.pdbqt",
+      "availability": "",
+      "synthesizability": "",
+      "solubility_risk": "",
+      "selectivity_risk": "",
+      "notes": "Co-crystal ligand redock control; docking score is not measured affinity (ITC Kd 4.5 pM, Muzammil et al. 2007)."
+    }
+  ],
+  "receptors": [
+    {
+      "receptor_id": "HIV1_1T3R",
+      "label": "1T3R HIV-1 protease WT dimer, chains A+B, rigid receptor (meeko PDBQT)",
+      "mutations": "",
+      "pdb_path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R_receptor_input.pdb",
+      "pdbqt_path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\receptor\\1T3R.pdbqt",
+      "flex_pdbqt_path": "",
+      "box_center_x": "19.459",
+      "box_center_y": "29.766",
+      "box_center_z": "14.159",
+      "box_size_x": "20.361",
+      "box_size_y": "20.806",
+      "box_size_z": "18.122",
+      "is_primary": "true"
+    }
+  ],
+  "poses": [],
+  "panel": [],
+  "reference_poses": [
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "1",
+      "rmsd_to_reference_A": "0.211",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-9.958"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "2",
+      "rmsd_to_reference_A": "2.733",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-9.148"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "3",
+      "rmsd_to_reference_A": "2.707",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-8.877"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "4",
+      "rmsd_to_reference_A": "3.005",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-8.782"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "5",
+      "rmsd_to_reference_A": "3.028",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-8.366"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "6",
+      "rmsd_to_reference_A": "2.945",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-8.233"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "7",
+      "rmsd_to_reference_A": "2.924",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-7.946"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "8",
+      "rmsd_to_reference_A": "1.870",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-7.880"
+    },
+    {
+      "candidate_id": "DRV",
+      "receptor_id": "HIV1_1T3R",
+      "pose_index": "9",
+      "rmsd_to_reference_A": "1.923",
+      "reference_conformer": "1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf)",
+      "affinity_kcal_mol": "-7.810"
+    }
+  ],
+  "input_info": {
+    "candidates": {
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\candidates.csv",
+      "rows": 1,
+      "columns": 14,
+      "ignored_columns": [],
+      "filled_columns": []
+    },
+    "receptors": {
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\receptors.csv",
+      "rows": 1,
+      "columns": 13,
+      "ignored_columns": [],
+      "filled_columns": []
+    },
+    "poses": {
+      "rows": 0,
+      "columns": 0,
+      "ignored_columns": [],
+      "filled_columns": []
+    },
+    "reference_poses": {
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\reference_poses.csv",
+      "rows": 9,
+      "columns": 6,
+      "ignored_columns": [],
+      "filled_columns": []
+    }
+  },
+  "warnings": [
+    "未提供突变 panel；一致性与耐药分量按中性值处理",
+    "['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记"
+  ],
+  "primary_receptor": "HIV1_1T3R",
+  "normalized_paths": {
+    "candidates": "normalized\\candidates.csv",
+    "receptors": "normalized\\receptors.csv",
+    "reference_poses": "normalized\\reference_poses.csv"
+  }
+}

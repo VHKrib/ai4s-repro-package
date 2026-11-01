@@ -1,0 +1,5 @@
+# Optional: only for scripts/sciencepal_bridge.py (remote SciencePal / Biology Agent).
+# The local 02 -> 03 pipeline never imports this; skip it unless you use the bridge.
+#
+# Installed into envs/py3119-bridge by:  setup_envs.ps1 -IncludeBridge
+requests>=2.31,<3

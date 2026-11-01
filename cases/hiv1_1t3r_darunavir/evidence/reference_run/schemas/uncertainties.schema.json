@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "uncertainties",
+  "description": "未解决的不确定性。impact=blocks_advance 的项目不能被自动放行。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "uncertainty_id",
+      "scope",
+      "kind",
+      "statement",
+      "impact",
+      "status"
+    ],
+    "properties": {
+      "uncertainty_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "scope": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "kind": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "statement": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "impact": {
+        "enum": [
+          "blocks_advance",
+          "limits_ranking",
+          "note"
+        ]
+      },
+      "resolves_with": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status": {
+        "enum": [
+          "open",
+          "closed"
+        ]
+      }
+    }
+  }
+}

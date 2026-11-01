@@ -1,0 +1,9 @@
+{
+  "status": "READY_FOR_03",
+  "exit_code": 0,
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "result": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/results with spaces/run 002",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "integrity_status": "INTEGRITY_PASS"
+}

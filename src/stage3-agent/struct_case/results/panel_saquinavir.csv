@@ -1,0 +1,10 @@
+﻿ligand,receptor,affinity_kcal_mol,ligand_efficiency,heavy_atoms,centroid_distance_to_crystal_A,site_overlap_fraction,min_distance_to_Asp25_oxygens,asp25_contacts_under_3.5A,delta_affinity_vs_WT
+saquinavir,WT,-11.452,0.234,49,0.45,1.0,2.94,4,0.0
+saquinavir,G48V,-11.784,0.24,49,0.38,1.0,2.92,4,-0.332
+saquinavir,L90M,-11.449,0.234,49,0.42,1.0,2.89,4,0.003
+saquinavir,I84V,-11.219,0.229,49,0.33,1.0,2.91,4,0.233
+saquinavir,D30N,-11.472,0.234,49,0.43,1.0,2.98,4,-0.02
+saquinavir,I50V,-11.272,0.23,49,0.45,1.0,2.95,4,0.18
+saquinavir,I54V,-11.437,0.233,49,0.46,1.0,2.96,4,0.015
+saquinavir,L76V,-11.502,0.235,49,0.43,1.0,2.95,4,-0.05
+saquinavir,V82A,-11.599,0.237,49,0.49,1.0,2.92,4,-0.147

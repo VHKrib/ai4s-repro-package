@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "poses",
+  "description": "tidy 姿势表：一行一个姿势。engine=replay 时由外部结果转换而来。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "receptor_id",
+      "pose_index",
+      "protocol",
+      "protocol_role",
+      "engine",
+      "geometry_source"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "pose_index": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "protocol": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "如 vina_flex_sidechain"
+      },
+      "protocol_role": {
+        "enum": [
+          "primary",
+          "sensitivity",
+          "reference"
+        ]
+      },
+      "engine": {
+        "enum": [
+          "vina",
+          "af3",
+          "replay",
+          "external"
+        ]
+      },
+      "affinity_kcal_mol": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "heavy_atoms": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "ligand_efficiency": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "centroid_distance_to_crystal_A": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "site_overlap_fraction": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "min_distance_to_Asp25_oxygens": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "asp25_contacts_under_3.5A": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "clash_pairs": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "polar_contacts": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "geometry_source": {
+        "enum": [
+          "table",
+          "sdf",
+          "af3_confidence",
+          "none"
+        ]
+      },
+      "confidence_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "confidence_type": {
+        "enum": [
+          "ranking_score",
+          "iptm",
+          "ptm",
+          null
+        ]
+      }
+    }
+  }
+}

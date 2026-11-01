@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "exit_code": 2,
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "result": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/profile",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "code": "PROFILE_NOT_APPROVED",
+  "message": "Only the frozen JAK2/6VGL/RXT v1 recipe is supported"
+}

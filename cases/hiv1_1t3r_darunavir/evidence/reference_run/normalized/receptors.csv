@@ -1,0 +1,2 @@
+﻿receptor_id,label,mutations,pdb_path,pdbqt_path,flex_pdbqt_path,box_center_x,box_center_y,box_center_z,box_size_x,box_size_y,box_size_z,is_primary
+HIV1_1T3R,"1T3R HIV-1 protease WT dimer, chains A+B, rigid receptor (meeko PDBQT)",,<ORIGINAL_ROOT>\runs\t_664138d8_hiv1_darunavir_20261030-224808\receptor\1T3R_receptor_input.pdb,<ORIGINAL_ROOT>\runs\t_664138d8_hiv1_darunavir_20261030-224808\receptor\1T3R.pdbqt,,19.459,29.766,14.159,20.361,20.806,18.122,true

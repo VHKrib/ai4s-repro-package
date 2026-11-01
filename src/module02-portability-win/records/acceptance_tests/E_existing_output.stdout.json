@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "exit_code": 1,
+  "code": "OUTPUT_EXISTS",
+  "message": "Refuse existing output; select a new run directory",
+  "result": null,
+  "refused_output": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-module001/runs/jak2_acceptance_001"
+}

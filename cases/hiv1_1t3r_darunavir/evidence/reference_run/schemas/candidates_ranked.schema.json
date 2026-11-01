@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "candidates_ranked",
+  "description": "候选排序表。对照行保留但不参与排名。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "name",
+      "role",
+      "decision",
+      "engine",
+      "uncertainty_count"
+    ],
+    "properties": {
+      "rank": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "role": {
+        "enum": [
+          "candidate",
+          "control",
+          "reference"
+        ]
+      },
+      "tier": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          null
+        ]
+      },
+      "decision": {
+        "enum": [
+          "advance",
+          "advance_with_flags",
+          "revise",
+          "needs_review",
+          "control_only",
+          "reject"
+        ]
+      },
+      "composite_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "pose_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "affinity_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "consistency_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "developability_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "resistance_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "affinity_kcal_mol": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "ligand_efficiency": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "primary_receptor": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "engine": {
+        "enum": [
+          "vina",
+          "af3",
+          "replay",
+          "external"
+        ]
+      },
+      "uncertainty_count": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "decision_codes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

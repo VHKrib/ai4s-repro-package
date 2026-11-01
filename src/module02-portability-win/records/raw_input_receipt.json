@@ -1,0 +1,54 @@
+{
+  "copied": [
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke-r1/original/6VGL.cif",
+      "path": "inputs/6VGL.cif",
+      "sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+      "bytes": 1150853
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke-r1/original/JAK2_O60674.fasta",
+      "path": "inputs/JAK2_O60674.fasta",
+      "sha256": "831aa8f7e0f2fae67653de02c1c3dfdba172afdc41d3512581be508774171bb4",
+      "bytes": 1244
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke-r1/original/Stage2Handoff_01_updated_20261027.md",
+      "path": "inputs/Stage2Handoff_01_updated_20261027.md",
+      "sha256": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f",
+      "bytes": 3966
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke/original/RXT_CCD.cif",
+      "path": "definitions/RXT_CCD.cif",
+      "sha256": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc",
+      "bytes": 9506
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke/records/ccd_provenance.json",
+      "path": "definitions/RXT_CCD_provenance.json",
+      "sha256": "e9fcb6d3176689e770fbf30476d18f2fd6467f13cdce97d01415536e03c5ed0e",
+      "bytes": 475
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/requirements.lock.txt",
+      "path": "requirements.lock.txt",
+      "sha256": "9c63712854ab8b78015d41e5485b22b5dde9b5939ea11a9b03d0cce8672be978",
+      "bytes": 737
+    },
+    {
+      "from": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-smoke-r1/records/reference/meeko_LICENSE",
+      "path": "definitions/meeko_LICENSE",
+      "sha256": "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331",
+      "bytes": 26526
+    },
+    {
+      "from": "/Users/cityu/Desktop/A4S-02-MODULE-001.md",
+      "path": "records/A4S-02-MODULE-001.md",
+      "sha256": "58842642811d2fcfbd81d8219e29b134deb279f544e6898d67f24d030a91203e",
+      "bytes": 7292
+    }
+  ],
+  "prepared_scientific_products_copied": false,
+  "all_science_output_runs_initially_absent": true
+}

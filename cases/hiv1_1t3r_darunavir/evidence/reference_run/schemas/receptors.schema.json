@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "receptors",
+  "description": "受体/复合物定义。replay 引擎只要求 ID；vina 引擎要求 pdbqt 与对接盒。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "receptor_id"
+    ],
+    "properties": {
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "label": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mutations": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "分号分隔，WT 留空"
+      },
+      "pdb_path": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "pdbqt_path": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "flex_pdbqt_path": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "box_center_x": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "box_center_y": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "box_center_z": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "box_size_x": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "box_size_y": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "box_size_z": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "is_primary": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}

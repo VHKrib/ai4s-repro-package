@@ -1,0 +1,13 @@
+# envs/py3119-stage3 — Python 3.11.9
+#
+# The stage-3 agent has NO third-party runtime dependencies: it imports only the
+# Python standard library (argparse, csv, dataclasses, json, math, statistics,
+# pathlib, ...). `jsonschema` is optional — stage3 validate uses it for extra
+# schema checking when present and skips it silently when absent.
+#
+# `pip freeze` of the reference environment is therefore empty. Do not add
+# packages here casually: the whole point is that the scoring/decision layer can
+# be reproduced on a bare CPython 3.11.9.
+#
+# The only "dependency" the vina engine needs is scripts/shim/vina.py, which
+# run_pipeline.py puts on PYTHONPATH; it wraps the official vina CLI binary.

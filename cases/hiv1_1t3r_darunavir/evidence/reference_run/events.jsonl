@@ -1,0 +1,19 @@
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": null, "message": "run start: hiv1_1t3r_darunavir", "data": {"engine": "vina"}}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": "intake", "message": "stage start: 输入契约校验"}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "warn", "stage": "intake", "message": "未提供突变 panel；一致性与耐药分量按中性值处理"}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "warn", "stage": "intake", "message": "['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记"}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": "intake", "message": "stage done: 输入契约校验", "data": {"duration_s": 0.0, "counters": {"candidates": 1, "controls": 0, "receptors": 1, "poses": 0, "primary_receptor": "HIV1_1T3R"}}}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": "applicability", "message": "stage start: 方法适用性与参考对照"}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": "applicability", "message": "stage done: 方法适用性与参考对照", "data": {"duration_s": 0.0, "counters": {"reference_status": "pass"}}}
+{"ts": "2026-10-30T22:53:24+08:00", "level": "info", "stage": "poses", "message": "stage start: 结合姿势 / 复合物数据"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "poses", "message": "Vina exhaustiveness=8, n_poses=9, seed=42"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "poses", "message": "stage done: 结合姿势 / 复合物数据", "data": {"duration_s": 34.0, "counters": {"pose_rows": 9}}}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "qc", "message": "stage start: 姿势几何与一致性检查"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "qc", "message": "stage done: 姿势几何与一致性检查", "data": {"duration_s": 0.0, "counters": {"selected_poses": 1, "matrix_rows": 1}}}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "rank", "message": "stage start: 综合评估与候选排序"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "rank", "message": "stage done: 综合评估与候选排序", "data": {"duration_s": 0.0, "counters": {"ranked_candidates": 1}}}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "decide", "message": "stage start: 判据与决策"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "decide", "message": "stage done: 判据与决策", "data": {"duration_s": 0.0, "counters": {"decision_advance": 1}}}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "export", "message": "stage start: 输出与清单"}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": "export", "message": "stage done: 输出与清单", "data": {"duration_s": 0.0, "counters": {}}}
+{"ts": "2026-10-30T22:53:58+08:00", "level": "info", "stage": null, "message": "run completed", "data": {"summary": "advance=1"}}

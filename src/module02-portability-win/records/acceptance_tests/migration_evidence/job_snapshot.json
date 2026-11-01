@@ -1,0 +1,224 @@
+{
+  "schema_version": "a4s.smoke_job.v1",
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "mode": "smoke_test",
+  "model_variant": "tag_removed_JH1_domain",
+  "target_id": "JAK2:O60674",
+  "project_direction": "JAK1/JAK2 project; this module supports only approved JAK2 recipe",
+  "source_structure": {
+    "source_id": "6VGL",
+    "path": "original/6VGL.cif",
+    "sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+    "bytes": 1150853
+  },
+  "inputs": {
+    "structure": {
+      "path": "original/6VGL.cif",
+      "sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+      "bytes": 1150853
+    },
+    "sequence": {
+      "path": "original/JAK2_O60674.fasta",
+      "sha256": "831aa8f7e0f2fae67653de02c1c3dfdba172afdc41d3512581be508774171bb4",
+      "bytes": 1244
+    },
+    "handoff": {
+      "path": "original/Stage2Handoff_01_updated_20261027.md",
+      "sha256": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f",
+      "bytes": 3966
+    },
+    "RXT_CCD": {
+      "path": "original/RXT_CCD.cif",
+      "sha256": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc",
+      "bytes": 9506
+    }
+  },
+  "request": {
+    "path": "request.json",
+    "sha256": "4213b543955f6937e7529c025816734b3b7490c1541dbac9922f8d6c6850aa50",
+    "bytes": 1332
+  },
+  "prepare_profile": {
+    "id": "jak2_6vgl_rxt",
+    "version": "1.0.0",
+    "path": "profile.json",
+    "sha256": "90dec5aa54cf592fefcac449b62547e24859e5b8636238c0818ab96eee45ba10",
+    "bytes": 2495
+  },
+  "selection_authority": {
+    "project_primary_reference_decisions": {
+      "path": "original/Stage2Handoff_01_updated_20261027.md",
+      "sha256": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f",
+      "bytes": 3966
+    },
+    "modeling_decision": "Approved profile jak2_6vgl_rxt 1.0.0",
+    "evidence": "records/domain_audit.json"
+  },
+  "model": "1",
+  "protein": {
+    "auth_asym_id": "A",
+    "label_asym_id": "D",
+    "entity_id": "1",
+    "kept_auth_range": [
+      840,
+      1132
+    ],
+    "kept_label_range": [
+      16,
+      308
+    ],
+    "excluded_auth_range": [
+      825,
+      839
+    ]
+  },
+  "reference_ligand": {
+    "comp_id": "RXT",
+    "auth_asym_id": "A",
+    "auth_seq_id": "1201",
+    "label_asym_id": "H",
+    "atoms": 23
+  },
+  "termini": {
+    "N": {
+      "residue": "ASP840",
+      "template": "NASP",
+      "state": "free ammonium N+ (three H)",
+      "N_formal_charge": 1,
+      "whole_residue_formal_charge": 0
+    },
+    "C": {
+      "residue": "GLY1132",
+      "template": "CGLY",
+      "state": "carboxylate",
+      "whole_residue_formal_charge": -1,
+      "new_OXT_origin": "modelled; output O/OXT symmetry mapping recorded"
+    }
+  },
+  "PTR": {
+    "residue": "A1007",
+    "identity": "PTR",
+    "template": "PTR",
+    "formal_charge": -2,
+    "physiological_state_validated": false
+  },
+  "outputs": {
+    "receptor": {
+      "path": "outputs/receptor.pdbqt",
+      "sha256": "8b3cd76af7590d1aec6c967f7a71e693f4abf5b6196750cd0bf5ec9881ba27e7",
+      "bytes": 238480,
+      "state": "AVAILABLE"
+    },
+    "receptor_json": {
+      "path": "outputs/receptor.json",
+      "sha256": "5b26d15e4bce0edbce61852caa1ef3e04c86285a8bb44bf574f64e90d7ca81ab",
+      "bytes": 7512036,
+      "state": "AVAILABLE"
+    },
+    "prepared_pdb": {
+      "path": "outputs/receptor_prepared.pdb",
+      "sha256": "18f31e42501cb7c101b220bbcfdf7df143a644ea7bfcd841e7a7634a1e4692f6",
+      "bytes": 385920,
+      "state": "AVAILABLE"
+    },
+    "selected_protein": {
+      "path": "inputs/domain_experimental.pdb",
+      "sha256": "40b708d164c77159592a06e4706cae27da539dc713c6e2a44a5a9256e264777a",
+      "bytes": 196109,
+      "state": "AVAILABLE"
+    },
+    "terminal_model": {
+      "path": "inputs/domain_terminal_model.pdb",
+      "sha256": "b973c8282829237238a8fa07f96184f394af9f01eb48e6ab354eeca48eb5b203",
+      "bytes": 196190,
+      "state": "AVAILABLE"
+    },
+    "reference": {
+      "path": "outputs/reference.sdf",
+      "sha256": "d8eb3ae7b53c319d24fea7040f53a2d89dae39da7e6f8fe15cbf074b0df28667",
+      "bytes": 2367,
+      "state": "AVAILABLE"
+    },
+    "ligand_sdf": {
+      "path": "outputs/ligand.sdf",
+      "sha256": "dd8699af30ad458a472e1800f0a3b4b8a6d382cef2824f84b4bc61dcf68cec28",
+      "bytes": 3941,
+      "state": "AVAILABLE"
+    },
+    "ligand": {
+      "path": "outputs/ligand.pdbqt",
+      "sha256": "132eac63b562df0080ecac6893eb2b90180a7dd4c25db4482a13337979cc1b62",
+      "bytes": 2489,
+      "state": "AVAILABLE"
+    },
+    "ligand_roundtrip": {
+      "path": "outputs/ligand_roundtrip.sdf",
+      "sha256": "60bd8eebfd106914c0d194653f6a1ce874fde2113b89aa182c22f9b1a1024882",
+      "bytes": 3569,
+      "state": "AVAILABLE"
+    },
+    "vina_box": {
+      "path": "outputs/vina_box.txt",
+      "sha256": "54a55c292e4456be57b2eaffc5ca1ed36179ce43780b9adfeaba0479b1477ffa",
+      "bytes": 120,
+      "state": "AVAILABLE"
+    }
+  },
+  "search_box": {
+    "center": [
+      56.59,
+      -6.306,
+      23.83
+    ],
+    "size": [
+      17.125999999999998,
+      18.177999999999997,
+      14.553999999999998
+    ],
+    "method": "reference_heavy_atom_AABB",
+    "padding": 5.0,
+    "unit": "angstrom",
+    "coordinate_source_sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+    "prepared_receptor_sha256": "8b3cd76af7590d1aec6c967f7a71e693f4abf5b6196750cd0bf5ec9881ba27e7"
+  },
+  "tool_versions": {
+    "executable": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+    "architecture": "arm64",
+    "versions": {
+      "rdkit": "2026.9.1",
+      "meeko": "0.8.0",
+      "gemmi": "0.7.5",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "tqdm": "4.70.1",
+      "python": "3.11.9"
+    },
+    "meeko_template_sha256": "535dc75a2cc5db579a3114090c9ab1273892c556cb7cc1a850ce2c4cd57c7cde",
+    "dependencies_added": false
+  },
+  "module_version": "1.0.0",
+  "run_metadata": "run_metadata.json",
+  "preparation_status": "READY_FOR_03",
+  "ready_for_03": true,
+  "components": {
+    "domain": "PASS",
+    "receptor": "PASS",
+    "ligand": "PASS_GENERATED",
+    "box": "PASS_GENERATED"
+  },
+  "blockers": [],
+  "assumptions": [
+    "Only CIF-annotated expression tag 825–839 excluded; original source remains incomplete in tag.",
+    "Dry rigid isolated JH1 domain, 191 waters excluded as modeling simplification; RXT separated.",
+    "NASP free N terminus, CGLY carboxylate C terminus; one modeled OXT and modeled H, no original domain heavy atom moved.",
+    "PTR dianion and default residue templates including HIE; physiological protonation not validated.",
+    "Reference and starting ligand use experimental co-crystal coordinates; no independent pose prediction."
+  ],
+  "warnings": [
+    "Meeko graph-symmetric PTR and terminal O/OXT atom name changes are mapped explicitly.",
+    "READY_FOR_03 denotes 02 preparation only; no affinity/activity validation or cross-module integration claim."
+  ],
+  "stage03_status": "待联调",
+  "vina_read_performed": false,
+  "docking_or_scoring_performed": false
+}

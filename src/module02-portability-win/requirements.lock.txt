@@ -1,0 +1,8 @@
+# CPython 3.11 / macOS arm64 runtime wheels; use --require-hashes --only-binary=:all:.
+gemmi==0.7.5 --hash=sha256:4db34eaa3d3fc102afea7a156330862cbeb82f557444c079403d4412e326c527
+meeko==0.8.0 --hash=sha256:38e73da7f0b11f7f8f0bfb2c481ccd148b8dfb9957522655b5cb0c4f6d68d1d6
+numpy==2.4.6 --hash=sha256:4cfe66903cc32a9921a6733d96b19bb6abf310397581bbad89c228f5abaf0ee8
+pillow==13.0.0 --hash=sha256:37290fbef0c73e2d51d594eb78fded7dc7170d1c3ad0a890269e6fd8c8c4e061
+rdkit==2026.9.1 --hash=sha256:7e698af579efd99cb452e2f697044775169c109527e8a43223d789cefa0788ad
+scipy==1.17.1 --hash=sha256:a3472cfbca0a54177d0faa68f697d8ba4c80bbdc19908c3465556d9f7efce9ee
+tqdm==4.70.1 --hash=sha256:c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73

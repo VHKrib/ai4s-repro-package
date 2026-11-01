@@ -1,0 +1,2 @@
+﻿candidate_id,receptor_id,mutation,known_resistance,affinity_kcal_mol,delta_vs_wt,site_overlap_fraction,catalytic_contacts,pose_changed,risk_level,flags
+DRV,HIV1_1T3R,,,-9.958,0.000,1.000,1,false,none,

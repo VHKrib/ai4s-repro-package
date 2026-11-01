@@ -1,0 +1,2 @@
+﻿candidate_id,name,role,tier,composite_score,decision,decision_codes,decision_reason,next_stage,reviewer_required,hard_failures,soft_flags
+DRV,"Darunavir (1T3R co-crystal ligand 017, TMC114)",candidate,B,0.588,advance,,达到预设计算筛选标准，优先进入实验验证,04,false,,

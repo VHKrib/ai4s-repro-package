@@ -1,0 +1,107 @@
+# THIRD_PARTY_NOTICES
+
+a4s-repro itself is MIT (see LICENSE). This file lists every third-party component
+that is either **bundled** in the package or **installed** by `setup_envs.ps1`, with
+the license that component actually declares.
+
+Rule of thumb used here: licenses were read from the installed `*.dist-info/METADATA`
+of the exact pinned versions, not from memory. Where the delivery brief assumed a
+different license, the notice below records the real one and says so.
+
+---
+
+## 1. Bundled binaries and data (shipped inside the package)
+
+### AutoDock Vina 1.2.5 — Apache-2.0
+* File: `tools/vina_1.2.5_win.exe`
+* sha256: `b5a23b226ee5dc1b028df04082d13a7b0e5b9b12b988bbcf9498cb351e20b38f`
+* Upstream: https://github.com/ccsb-scripps/AutoDock-Vina (release v1.2.5, Windows x86_64 build)
+* License text: Apache License 2.0 — https://www.apache.org/licenses/LICENSE-2.0
+* Bundled **unmodified**. It is executed as a separate process; no Vina code is
+  linked into this package's Python code.
+* Citation: Eberhardt J, Santos-Martins D, Tillack AF, Forli S. AutoDock Vina 1.2.0:
+  New Docking Methods, Expanded Force Field, and Python Bindings. J Chem Inf Model. 2021.
+
+### PDB entry 1T3R — wwPDB public domain (CC0 1.0)
+* File: `cases/hiv1_1t3r_darunavir/inputs/1T3R.pdb`
+* Source: https://files.rcsb.org/download/1T3R.pdb (downloaded unmodified)
+* Structure: HIV-1 protease wild-type dimer in complex with TMC114 (darunavir), 1.20 Å.
+* wwPDB data is made available under a CC0 1.0 public-domain dedication.
+* Citation: Kovalevsky AY et al. (structure 1T3R).
+
+### PubChem CID 213039 3D conformer — public domain
+* File: `cases/hiv1_1t3r_darunavir/inputs/pubchem_cid213039_3d.sdf`
+* Source: PubChem (https://pubchem.ncbi.nlm.nih.gov/compound/213039), 3D SDF.
+* Used **only as a bond-order template**; the coordinates used for docking come from
+  the 1T3R co-crystal ligand (HETATM `017`). PubChem data is free of copyright
+  restrictions (US Government work).
+* Citation: Kim S et al. PubChem 2023 update. Nucleic Acids Res. 2023.
+
+### module-02 portability copy — third-party module, see its own records
+* Directory: `src/module02-portability-win/`
+* This is a copy of the upstream "A4S-02-MODULE-001" module with exactly one change
+  (`str(p.relative_to(root))` -> `p.relative_to(root).as_posix()` in
+  `scripts/common.py`), made so the module's final integrity check can pass on
+  Windows. The original delivery is **not** modified and is **not** included here.
+* Provenance / hash records travel with the copy: `PACKAGE_SHA256SUMS`,
+  `records/package_manifest.json`, `records/protection_check.json`.
+* Bundled third-party material inside it:
+  * `definitions/RXT_CCD.cif` — PDB Chemical Component Dictionary entry, wwPDB CC0 1.0.
+  * `definitions/meeko_LICENSE` — GNU LGPL 2.1 (Meeko), see below.
+  * `definitions/RXT_CCD_provenance.json` — records where the CIF came from.
+* The module's own license is whatever the upstream module-02 authors granted; it is
+  redistributed here unmodified-in-substance for reproducibility, with attribution.
+
+---
+
+## 2. Python packages installed by `setup_envs.ps1` (not vendored)
+
+These are **not** bundled: `setup_envs.ps1` creates a venv and installs them from
+PyPI at the pinned versions in `requirements/`. Each remains under its own license.
+
+| Package | Pinned | License (from dist-info METADATA) | Used for |
+|---|---|---|---|
+| rdkit | 2026.9.1 | **BSD-3-Clause** | ligand graph/coordinates, conformers, `rdMolAlign.GetBestRMS` redock RMSD |
+| meeko | 0.8.0 | **LGPL-2.1** | `mk_prepare_ligand` / `mk_prepare_receptor` (PDBQT), `mk_export` (PDBQT→SDF) |
+| gemmi | 0.7.5 | **MPL-2.0** (or LGPL-3.0 at your option) | PDB/mmCIF parsing |
+| numpy | 2.4.6 | **BSD-3-Clause** (bundle: BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0) | numeric dependency |
+| scipy | 1.17.1 | **BSD-3-Clause** | dependency of meeko |
+| pillow | 13.0.0 | **MIT-CMU** | dependency of the rdkit wheel |
+| tqdm | 4.70.1 | **MPL-2.0 AND MIT** | progress bars in meeko |
+| colorama | 0.4.6 | **BSD-3-Clause** | dependency of tqdm on Windows |
+| requests | >=2.31,<3 (optional) | **Apache-2.0** | only `scripts/sciencepal_bridge.py` |
+
+### Note on Meeko (LGPL-2.1) — corrected against the delivery brief
+The brief for this package said "Meeko/BSD-3". **Meeko 0.8.0 declares LGPL-2.1**
+(`meeko-0.8.0.dist-info/METADATA`, `License: LGPL-2.1`). Consequences:
+
+* Meeko is used as an **unmodified installed dependency**, imported by Python at
+  runtime — the usual "use a library, don't relicense it" case. No Meeko source is
+  copied into this package, so this package's MIT license is unaffected.
+* If you redistribute a **modified** Meeko, LGPL-2.1 obligations apply to that
+  modified library (source availability, relinking).
+* If your organisation forbids LGPL dependencies, the ligand/receptor preparation
+  step cannot be reproduced with this package as-is; `mk_prepare_*` is the only
+  path here that turns RDKit molecules into AutoDock PDBQT.
+
+---
+
+## 3. Deliberately NOT included
+
+* **3Dmol.js, p5.js** — used by the separate `research-dashboard` deliverable
+  (web viewer), not by any code path in this package. Nothing here loads them.
+* **jsonschema (MIT)** — optional for `stage3 validate`; the code path degrades
+  gracefully when it is absent, so it is not pinned.
+* **module-02 original delivery** (~217 MB, including a 204 MB JAK1 module tree) —
+  not redistributed. `scripts/run_pipeline.py --mode jak2` reads a delivery you
+  supply with `--stage02-delivery`.
+
+---
+
+## 4. Scientific honesty notice (not a license, but belongs next to one)
+
+Docking scores produced by this package are **Vina scoring-function values**, not
+measured affinities. The bundled case is a **co-crystal redocking self-check**
+(dock the crystallographic ligand back into its own structure); a low RMSD proves the
+protocol reproduces a known pose, not that any molecule inhibits anything.
+See `docs/方法说明.md` §限制.

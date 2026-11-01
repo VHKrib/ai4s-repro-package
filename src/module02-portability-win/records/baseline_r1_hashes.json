@@ -1,0 +1,17 @@
+{
+  "baseline": "A4S-02-SMOKE-001-R1",
+  "archive_sha256": "f4497ece7ea3b85c4eae8f8174ac72e40a3346fbd872b1eeeb241bc8784a0e99",
+  "files": {
+    "inputs/domain_experimental.pdb": "40b708d164c77159592a06e4706cae27da539dc713c6e2a44a5a9256e264777a",
+    "inputs/domain_terminal_model.pdb": "b973c8282829237238a8fa07f96184f394af9f01eb48e6ab354eeca48eb5b203",
+    "outputs/receptor.pdbqt": "8b3cd76af7590d1aec6c967f7a71e693f4abf5b6196750cd0bf5ec9881ba27e7",
+    "outputs/receptor.json": "5b26d15e4bce0edbce61852caa1ef3e04c86285a8bb44bf574f64e90d7ca81ab",
+    "outputs/receptor_prepared.pdb": "18f31e42501cb7c101b220bbcfdf7df143a644ea7bfcd841e7a7634a1e4692f6",
+    "outputs/ligand.sdf": "dd8699af30ad458a472e1800f0a3b4b8a6d382cef2824f84b4bc61dcf68cec28",
+    "outputs/ligand.pdbqt": "132eac63b562df0080ecac6893eb2b90180a7dd4c25db4482a13337979cc1b62",
+    "outputs/reference.sdf": "d8eb3ae7b53c319d24fea7040f53a2d89dae39da7e6f8fe15cbf074b0df28667",
+    "outputs/ligand_roundtrip.sdf": "60bd8eebfd106914c0d194653f6a1ce874fde2113b89aa182c22f9b1a1024882",
+    "outputs/vina_box.txt": "54a55c292e4456be57b2eaffc5ca1ed36179ce43780b9adfeaba0479b1477ffa"
+  },
+  "reference_hashes_only_no_products_copied": true
+}

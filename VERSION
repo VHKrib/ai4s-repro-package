@@ -1,0 +1,4 @@
+a4s-repro 1.0.0
+built: 2026-11-01
+contents: 02->03 reproduction pipeline + HIV-1 protease / darunavir (1T3R) case
+entry point: scripts/run_pipeline.py (case mode) | tests/smoke_test.py

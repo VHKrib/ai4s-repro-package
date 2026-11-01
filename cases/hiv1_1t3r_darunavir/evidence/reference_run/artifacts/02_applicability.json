@@ -1,0 +1,25 @@
+{
+  "stage": "applicability",
+  "fingerprint": "1cfd86a375478642a7e5d8c3491c43c7c0604b8f4a4d3b4c0561f49f9330564d",
+  "result": {
+    "rows": [
+      {
+        "check_id": "redock_drv",
+        "check_type": "redock_rmsd",
+        "scope": "DRV@HIV1_1T3R",
+        "metric_name": "best_rmsd_A",
+        "metric_value": 0.211,
+        "threshold": 2.0,
+        "comparator": "le",
+        "status": "pass",
+        "source": "reference_poses",
+        "note": "最高分姿势 RMSD=0.21 A (通过); 红对接只验证姿势复现，不验证打分排序"
+      }
+    ],
+    "status": "pass",
+    "summary": "参考对照通过（pass=1）",
+    "uncertainties": [],
+    "required_failures": [],
+    "ranking_warnings": []
+  }
+}

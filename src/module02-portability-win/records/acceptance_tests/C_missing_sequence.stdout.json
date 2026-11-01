@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "exit_code": 2,
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "result": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/C_missing_sequence",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "code": "REQUEST_FIELDS_NOT_SUPPORTED",
+  "message": "Required keys must be complete; unknown policy strings are rejected"
+}

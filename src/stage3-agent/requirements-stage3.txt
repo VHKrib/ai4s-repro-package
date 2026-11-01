@@ -1,0 +1,10 @@
+# 阶段 03 核心管线只用 Python 标准库，以下均为可选。
+#
+# 真实对接（没有时 engine.name=vina 会明确报错）
+# vina
+#
+# 结构/化学感知（当前适配器未强制依赖）
+# rdkit
+#
+# validate 的第二层 JSON Schema 校验（未安装时跳过）
+jsonschema

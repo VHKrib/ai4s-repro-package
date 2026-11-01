@@ -1,0 +1,17 @@
+﻿ligand,mutation,position,min_distance_to_ligand_A,zone
+3h,D30N,30,4.39,proximal
+3h,G48V,48,5.28,intermediate
+3h,I50V,50,3.45,proximal
+3h,I54V,54,7.04,intermediate
+3h,L76V,76,6.44,intermediate
+3h,V82A,82,3.69,proximal
+3h,I84V,84,3.56,proximal
+3h,L90M,90,9.74,intermediate
+34b,D30N,30,3.67,proximal
+34b,G48V,48,4.9,proximal
+34b,I50V,50,3.39,proximal
+34b,I54V,54,6.73,intermediate
+34b,L76V,76,5.99,intermediate
+34b,V82A,82,3.68,proximal
+34b,I84V,84,3.33,proximal
+34b,L90M,90,9.31,intermediate

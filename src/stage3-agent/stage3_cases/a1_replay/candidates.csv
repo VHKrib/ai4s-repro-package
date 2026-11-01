@@ -1,0 +1,5 @@
+﻿candidate_id,name,role,smiles,source,chemotype,heavy_atoms,ligand_sdf_path,ligand_pdbqt_path,availability,synthesizability,solubility_risk,selectivity_risk,notes
+saquinavir,Saquinavir,control,,已上市蛋白酶抑制剂；1HXB 共晶配体,羟乙基胺拟肽,49,struct_case/ligand/saquinavir_A.sdf,struct_case/ligand/saquinavir.pdbqt,1.000,1.000,,,红对接参照；SMILES 见 struct_case/ligand/saquinavir.sdf
+darunavir,Darunavir,control,,已上市蛋白酶抑制剂；A1_compounds 对照行,羟乙基胺拟肽,38,struct_case/ligand/darunavir.sdf,struct_case/ligand/darunavir.pdbqt,1.000,1.000,,,用于已知效价次序对照；SMILES 见 struct_case/ligand/darunavir.sdf
+3h,3h,candidate,COc1ccc(S(=O)(=O)N(CC(C)C)C[C@@H](O)[C@H](Cc2ccccc2)Nc2c(N(C)[C@@H]3CCOC3)c(=O)c2=O)cc1,A1 / ChEMBL CHEMBL4444017,羟乙基胺拟肽,41,struct_case/ligand/3h.sdf,struct_case/ligand/3h.pdbqt,,,,,Ki 0.51 nM（摘要与 ChEMBL 一致）；成药性四项待补
+34b,34b,candidate,CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)[C@@H]1CCNC1)S(=O)(=O)c1ccc(O)cc1,A1 / ChEMBL CHEMBL5402748,羟乙基胺拟肽,34,struct_case/ligand/34b.sdf,struct_case/ligand/34b.pdbqt,,,,,摘要 0.32 nM vs ChEMBL 320 nM 单位矛盾未解决；成药性四项待补

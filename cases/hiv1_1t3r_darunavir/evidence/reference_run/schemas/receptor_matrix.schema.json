@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "receptor_matrix",
+  "description": "候选 × 受体背景矩阵：结合、几何与突变风险。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "receptor_id",
+      "risk_level"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mutation": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "known_resistance": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "affinity_kcal_mol": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "delta_vs_wt": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "site_overlap_fraction": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "catalytic_contacts": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "pose_changed": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "risk_level": {
+        "enum": [
+          "none",
+          "low",
+          "moderate",
+          "high",
+          "unknown"
+        ]
+      },
+      "flags": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿candidate_id,receptor_id,protocol,protocol_role,engine,pose_index,affinity_kcal_mol,heavy_atoms,ligand_efficiency,centroid_distance_to_crystal_A,site_overlap_fraction,min_distance_to_Asp25_oxygens,asp25_contacts_under_3.5A,clash_pairs,polar_contacts,pose_score,selected,selection_reason,geometry_source,confidence_score,confidence_type
+DRV,HIV1_1T3R,vina_rigid,primary,vina,1,-9.958,38,0.262,0.120,1.000,2.641,1,0,5,0.800,true,geometry_gate_passed;lowest_affinity,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,2,-9.148,38,0.241,0.800,0.868,2.729,2,0,5,0.921,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,3,-8.877,38,0.234,1.820,0.842,2.914,1,0,6,0.705,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,4,-8.782,38,0.231,2.610,0.816,3.392,1,0,5,0.689,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,5,-8.366,38,0.220,2.180,0.789,2.816,2,0,6,0.874,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,6,-8.233,38,0.217,3.240,0.816,3.524,0,0,5,0.489,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,7,-7.946,38,0.209,4.200,0.579,5.152,0,0,6,0.347,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,8,-7.880,38,0.207,4.860,0.632,3.122,1,0,5,0.579,false,,sdf,,
+DRV,HIV1_1T3R,vina_rigid,primary,vina,9,-7.810,38,0.206,1.870,0.763,2.931,2,0,5,0.858,false,,sdf,,

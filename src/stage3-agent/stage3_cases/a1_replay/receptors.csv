@@ -1,0 +1,10 @@
+﻿receptor_id,label,mutations,pdb_path,pdbqt_path,flex_pdbqt_path,box_center_x,box_center_y,box_center_z,box_size_x,box_size_y,box_size_z,is_primary
+WT,1HXB 野生型,,struct_case/receptor/1HXB_receptor.pdb,struct_case/receptor/1HXB_receptor.pdbqt,struct_case/receptor/1HXB_receptor.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,true
+D30N,D30N,D30N,struct_case/mutants/D30N.pdb,struct_case/mutants/D30N_receptor.pdbqt,struct_case/mutants/D30N_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+G48V,G48V,G48V,struct_case/mutants/G48V.pdb,struct_case/mutants/G48V_receptor.pdbqt,struct_case/mutants/G48V_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+I50V,I50V,I50V,struct_case/mutants/I50V.pdb,struct_case/mutants/I50V_receptor.pdbqt,struct_case/mutants/I50V_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+I54V,I54V,I54V,struct_case/mutants/I54V.pdb,struct_case/mutants/I54V_receptor.pdbqt,struct_case/mutants/I54V_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+L76V,L76V,L76V,struct_case/mutants/L76V.pdb,struct_case/mutants/L76V_receptor.pdbqt,struct_case/mutants/L76V_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+V82A,V82A,V82A,struct_case/mutants/V82A.pdb,struct_case/mutants/V82A_receptor.pdbqt,,18.25,-1.42,10.21,24.0,24.0,24.0,false
+I84V,I84V,I84V,struct_case/mutants/I84V.pdb,struct_case/mutants/I84V_receptor.pdbqt,struct_case/mutants/I84V_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false
+L90M,L90M,L90M,struct_case/mutants/L90M.pdb,struct_case/mutants/L90M_receptor.pdbqt,struct_case/mutants/L90M_flex_flex.pdbqt,18.25,-1.42,10.21,24.0,24.0,24.0,false

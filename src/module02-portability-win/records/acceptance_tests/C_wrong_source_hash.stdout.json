@@ -1,0 +1,12 @@
+{
+  "status": "FAIL",
+  "exit_code": 1,
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "result": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/C_wrong_source_hash",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "code": "INPUT_HASH_MISMATCH",
+  "message": "structure",
+  "expected": "0000000000000000000000000000000000000000000000000000000000000000",
+  "actual": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f"
+}

@@ -1,0 +1,2 @@
+﻿check_id,check_type,scope,metric_name,metric_value,threshold,comparator,status,source,note
+redock_drv,redock_rmsd,DRV@HIV1_1T3R,best_rmsd_A,0.211,2.000,le,pass,reference_poses,最高分姿势 RMSD=0.21 A (通过); 红对接只验证姿势复现，不验证打分排序

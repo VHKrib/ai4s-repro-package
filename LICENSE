@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 A4S (AI4ScienceHackthon) reproduction package authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Scope of this MIT license: the code written for this package (scripts/, src/,
+tests/, setup_envs.*, documentation) EXCEPT where a file states otherwise and
+EXCEPT third-party components listed in THIRD_PARTY_NOTICES. In particular:
+
+  * src/stage3-agent/  is derived from the original stage-3 agent sources and is
+    relicensed here under MIT by the same authors.
+  * src/module02-portability-win/  is a portability copy of a third-party module-02
+    module; it carries its own notices (see THIRD_PARTY_NOTICES, section "module-02").
+  * tools/vina_1.2.5_win.exe  is AutoDock Vina, Apache-2.0, bundled unmodified.
+  * data/  (crystal structures, ligand templates) is public-domain PDB / PubChem data;
+    see THIRD_PARTY_NOTICES.

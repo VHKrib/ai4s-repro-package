@@ -1,0 +1,2 @@
+﻿rank,candidate_id,name,role,tier,decision,composite_score,pose_score,affinity_score,consistency_score,developability_score,resistance_score,affinity_kcal_mol,ligand_efficiency,primary_receptor,engine,uncertainty_count,decision_codes
+1,DRV,"Darunavir (1T3R co-crystal ligand 017, TMC114)",candidate,B,advance,0.588,0.800,0.990,0.000,0.500,0.500,-9.958,0.262,HIV1_1T3R,vina,4,

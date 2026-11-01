@@ -1,0 +1,9 @@
+﻿candidate_id,receptor_id,pose_index,rmsd_to_reference_A,reference_conformer,affinity_kcal_mol
+saquinavir,WT,1,0.88,A,-11.424
+saquinavir,WT,2,1.3,B,-10.94
+saquinavir,WT,3,3.78,A,-10.369
+saquinavir,WT,4,3.74,B,-10.248
+saquinavir,WT,5,5.35,A,-10.006
+saquinavir,WT,6,5.19,B,-9.976
+saquinavir,WT,7,6.75,B,-9.639
+saquinavir,WT,8,8.68,B,-9.531

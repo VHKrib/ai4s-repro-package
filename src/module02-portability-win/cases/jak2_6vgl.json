@@ -1,0 +1,46 @@
+{
+  "schema_version": "a4s.prepare_request.v1",
+  "job_id": "A4S-02-MODULE-001-JAK2-001",
+  "mode": "smoke_test",
+  "target_id": "JAK2:O60674",
+  "source_structure": {
+    "source_id": "6VGL",
+    "path": "../inputs/6VGL.cif",
+    "sha256": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f"
+  },
+  "sequence": {
+    "path": "../inputs/JAK2_O60674.fasta",
+    "sha256": "831aa8f7e0f2fae67653de02c1c3dfdba172afdc41d3512581be508774171bb4"
+  },
+  "handoff": {
+    "path": "../inputs/Stage2Handoff_01_updated_20261027.md",
+    "sha256": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f"
+  },
+  "chemical_definition": {
+    "comp_id": "RXT",
+    "path": "../definitions/RXT_CCD.cif",
+    "sha256": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc"
+  },
+  "prepare_profile": {
+    "id": "jak2_6vgl_rxt",
+    "version": "1.0.0",
+    "path": "../profiles/jak2_6vgl_rxt_v1.json",
+    "sha256": "90dec5aa54cf592fefcac449b62547e24859e5b8636238c0818ab96eee45ba10"
+  },
+  "model": "1",
+  "protein": {
+    "auth_asym_id": "A",
+    "label_asym_id": "D"
+  },
+  "reference_ligand": {
+    "comp_id": "RXT",
+    "auth_asym_id": "A",
+    "auth_seq_id": "1201",
+    "label_asym_id": "H"
+  },
+  "search_box": {
+    "method": "reference_heavy_atom_AABB",
+    "padding": 5.0,
+    "unit": "angstrom"
+  }
+}

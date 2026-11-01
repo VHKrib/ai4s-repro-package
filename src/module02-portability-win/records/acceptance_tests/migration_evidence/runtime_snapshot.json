@@ -1,0 +1,22 @@
+{
+  "module_version": "1.0.0",
+  "started_utc": "2026-10-27T15:09:12.665263+00:00",
+  "request_source_path": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/cases/jak2_6vgl.json",
+  "output_directory": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/results with spaces/run 002",
+  "interpreter": "/Users/cityu/.codex/.chatgpt-projects/g-p-6ad38b0f13a081919e855e893d9e2c43/module02-prep/.venv/bin/python",
+  "implementation_sha256": {
+    "check_integrity.py": "1f6ef5500852e5b4e9ffa5c6abaf16a769b93012bf3b0ca453f96ec3e905b8fa",
+    "check_science.py": "b09fabb0da41dcb754949de23e4b935d5f098894753f05b60a9db7547f55b875",
+    "common.py": "1bea2a1d258991874e61dc32769583312f24a004caf0c15076faa419d0463382",
+    "receptor_content.py": "44a1b8860ccc421c1b3c42511dad2743df2ccbcd553ad44d1a0c41636639e1a7",
+    "recipes.py": "e85c8947fd86434ea5654df1249602edb9f85d30d0df00a0708728d1c5a02c20",
+    "run_prepare.py": "44a3a7963c298cdc094ae29f5edca7e4d062ab91fdb286a1b83b501534a4abe1",
+    "scientific_steps.py": "9ca0800621bc6d7f33f3ebad153e3058d971ab66bc0730e2cba1aeb8ca090e24"
+  },
+  "scientific_products_copied": false,
+  "request_sha256": "4213b543955f6937e7529c025816734b3b7490c1541dbac9922f8d6c6850aa50",
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "ended_utc": "2026-10-27T15:09:26.129587+00:00",
+  "exit_code": 0,
+  "status": "READY_FOR_03"
+}

@@ -1,0 +1,91 @@
+{
+  "stage": "decide",
+  "fingerprint": "6b5bcdaa340470fea55dedcb1a6fb2a3f20a1f7e2f6bbeb4cad40f93eb7f4d79",
+  "result": {
+    "ranked_rows": [
+      {
+        "rank": 1,
+        "candidate_id": "DRV",
+        "name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+        "role": "candidate",
+        "tier": "B",
+        "decision": "advance",
+        "composite_score": 0.588,
+        "pose_score": 0.8,
+        "affinity_score": 0.99,
+        "consistency_score": 0.0,
+        "developability_score": 0.5,
+        "resistance_score": 0.5,
+        "affinity_kcal_mol": -9.958,
+        "ligand_efficiency": 0.262,
+        "primary_receptor": "HIV1_1T3R",
+        "engine": "vina",
+        "uncertainty_count": 4,
+        "decision_codes": ""
+      }
+    ],
+    "decisions": [
+      {
+        "candidate_id": "DRV",
+        "name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+        "role": "candidate",
+        "tier": "B",
+        "composite_score": 0.588,
+        "decision": "advance",
+        "decision_codes": "",
+        "decision_reason": "达到预设计算筛选标准，优先进入实验验证",
+        "next_stage": "04",
+        "reviewer_required": false,
+        "hard_failures": "",
+        "soft_flags": ""
+      }
+    ],
+    "uncertainties": [
+      {
+        "uncertainty_id": "U-INPUT-001",
+        "scope": "case",
+        "kind": "input_warning",
+        "statement": "未提供突变 panel；一致性与耐药分量按中性值处理",
+        "impact": "note",
+        "resolves_with": "补全输入字段后重跑",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-INPUT-002",
+        "scope": "case",
+        "kind": "input_warning",
+        "statement": "['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记",
+        "impact": "note",
+        "resolves_with": "补全输入字段后重跑",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-METHOD-DRV",
+        "scope": "DRV",
+        "kind": "no_method_comparison",
+        "statement": "缺少刚性/柔性协议对照，方法一致性按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "补同参数的刚性 panel 或统一协议",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-DEV-DRV",
+        "scope": "DRV",
+        "kind": "developability_unassessed",
+        "statement": "可获得性/可合成性/溶解度/选择性四项都未评估，按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "补供应商目录、逆合成可行性、logS/PSA 与选择性数据",
+        "status": "open"
+      },
+      {
+        "uncertainty_id": "U-PANEL-DRV",
+        "scope": "DRV",
+        "kind": "no_mutation_panel",
+        "statement": "没有突变 panel，耐药负担按中性 0.5 处理",
+        "impact": "limits_ranking",
+        "resolves_with": "至少覆盖已知耐药位点的柔性侧链对接",
+        "status": "open"
+      }
+    ]
+  }
+}

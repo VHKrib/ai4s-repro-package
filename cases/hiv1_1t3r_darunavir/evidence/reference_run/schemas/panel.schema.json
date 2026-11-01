@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "panel",
+  "description": "突变 panel：每个候选在每个受体背景下的刚性/柔性侧链对接差值。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "receptor_id",
+      "mutation"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mutation": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "rigid_delta": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "flex_delta": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "pose_changed": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "known_resistance": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}

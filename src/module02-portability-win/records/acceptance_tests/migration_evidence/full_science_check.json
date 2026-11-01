@@ -1,0 +1,11 @@
+{
+  "status": "SCIENCE_PASS",
+  "exit_code": 0,
+  "read_only": true,
+  "scientific_content": "PASS",
+  "checked_files": 10,
+  "missing_components": [],
+  "issues": [],
+  "ready_for_03": false,
+  "vina_read_performed": false
+}

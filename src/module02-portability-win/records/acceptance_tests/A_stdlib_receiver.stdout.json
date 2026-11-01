@@ -1,0 +1,10 @@
+{
+  "status": "INTEGRITY_PASS",
+  "exit_code": 0,
+  "read_only": true,
+  "checked_files": 56,
+  "declared_preparation_status": "READY_FOR_03",
+  "scope": "paths, hashes, status and bindings only",
+  "scientific_content_revalidated": false,
+  "issues": []
+}

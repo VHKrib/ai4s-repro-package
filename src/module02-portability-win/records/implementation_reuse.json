@@ -1,0 +1,55 @@
+{
+  "from": [
+    {
+      "path": "module02-smoke-r1/scripts/domain_workflow.py",
+      "sha256": "26a53cb9e3ec347a43e53fa635e467f4f526e754912562784294afa4627b7067",
+      "functions": [
+        "sha",
+        "save",
+        "rows",
+        "xyz",
+        "selected_source",
+        "pdb_line",
+        "audit",
+        "derive"
+      ]
+    },
+    {
+      "path": "module02-smoke/scripts/smoke.py",
+      "sha256": "527e465a8161060eb1091e2942c4eaf5e62e9a931ce8ec63de4c409bee210aff",
+      "functions": [
+        "identity",
+        "prepare_ligand_sdf",
+        "read_one_sdf",
+        "index_pairs",
+        "validate_ligand",
+        "make_box"
+      ]
+    },
+    {
+      "path": "module02-smoke-r1/scripts/receptor_content.py",
+      "sha256": "44a1b8860ccc421c1b3c42511dad2743df2ccbcd553ad44d1a0c41636639e1a7",
+      "functions": [
+        "verify_receptor"
+      ],
+      "byte_copy": true
+    },
+    {
+      "path": "module02-smoke-r1/scripts/check_job.py",
+      "sha256": "03239eba3f8b11c6b09bc95e109e5e77a1a12489aa25b377830723c45fbc80ef",
+      "changes": [
+        "Keep receptor/ligand/frame/box scientific checks; standard-library manifest verification separated.",
+        "Newly generated ligand record path replaces old reference record.",
+        "Explicit PREPARED_PENDING_VALIDATION pre-promotion state returns SCIENCE_PASS."
+      ]
+    }
+  ],
+  "interface_changes": [
+    "Explicit run-root arguments replace module-directory globals.",
+    "Initial domain audit no longer requires a pre-existing box or professor computed values.",
+    "Generate component table and ligand atom-site rows directly from source CIF.",
+    "Box generation binds newly generated receptor and ligand; scientific formula unchanged."
+  ],
+  "scientific_recipe_changed": false,
+  "old_implementations_edited": false
+}

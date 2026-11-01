@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "reference_poses",
+  "description": "参考配体重对接姿势，用于方法适用性检查。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "receptor_id",
+      "pose_index",
+      "rmsd_to_reference_A"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "receptor_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "pose_index": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 1
+      },
+      "rmsd_to_reference_A": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "reference_conformer": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "affinity_kcal_mol": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

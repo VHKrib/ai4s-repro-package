@@ -1,0 +1,9 @@
+{
+  "url": "https://files.rcsb.org/ligands/download/RXT.cif",
+  "final_url": "https://files.rcsb.org/ligands/download/RXT.cif",
+  "retrieved_utc": "2026-10-27T13:10:21.135282+00:00",
+  "path": "original/RXT_CCD.cif",
+  "bytes": 9506,
+  "sha256": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc",
+  "reason": "Input structure includes RXT bonds/stereo but no per-atom formal-charge column; official CCD supplies charges and independent identity metadata."
+}

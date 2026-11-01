@@ -1,0 +1,87 @@
+{
+  "profile_id": "jak2_6vgl_rxt",
+  "version": "1.0.0",
+  "approved_basis": "A4S-02-SMOKE-001-R1 accepted recipe; current MODULE-001 authorizes encapsulation only",
+  "mode": "smoke_test",
+  "target_id": "JAK2:O60674",
+  "source_id": "6VGL",
+  "model": "1",
+  "protein": {
+    "auth_asym_id": "A",
+    "label_asym_id": "D"
+  },
+  "reference_ligand": {
+    "comp_id": "RXT",
+    "auth_asym_id": "A",
+    "auth_seq_id": "1201",
+    "label_asym_id": "H"
+  },
+  "model_variant": "tag_removed_JH1_domain",
+  "exclude_only_CIF_expression_tag_auth_range": [
+    825,
+    839
+  ],
+  "keep_auth_range": [
+    840,
+    1132
+  ],
+  "keep_label_range": [
+    16,
+    308
+  ],
+  "templates": {
+    "A:840": "NASP",
+    "A:1007": "PTR",
+    "A:1132": "CGLY"
+  },
+  "PTR_formal_charge": -2,
+  "termini": {
+    "N": "free ammonium; N formal +1, NASP residue net 0",
+    "C": "carboxylate; CGLY residue net -1"
+  },
+  "OXT_geometry": {
+    "method": "reflect_C_to_O_about_C_to_CA_axis_in_carboxyl_plane",
+    "C_OXT_distance_angstrom": 1.25,
+    "coordinate_decimals": 3,
+    "origin": "modelled"
+  },
+  "ligand": {
+    "graph": "source CIF atom/bond table cross-checked against frozen official RXT CCD",
+    "formal_charge": 0,
+    "add_H": "RDKit AddHs(addCoords=True)",
+    "move_original_heavy_atoms": false,
+    "charge_model": "gasteiger",
+    "merge_atom_types": [
+      "H"
+    ]
+  },
+  "search_box": {
+    "method": "reference_heavy_atom_AABB",
+    "padding": 5.0,
+    "unit": "angstrom"
+  },
+  "dry_rigid": true,
+  "template_cache_enabled": false,
+  "physiological_protonation_validated": false,
+  "expected_source_sha256": {
+    "structure": "ba70401d4a19a2e358227d1aa9b09608ab015f9e16abd9aaae7ec2c2745f3c4f",
+    "sequence": "831aa8f7e0f2fae67653de02c1c3dfdba172afdc41d3512581be508774171bb4",
+    "handoff": "41bc876733faad773dcd6b312dcd9795b384bc419609832d2f8fa40771e6475f",
+    "RXT_CCD": "eb6239f83887d56a88ce713ebaac5cc27e6edfea9814e59a3b23a7eeb58c28dc"
+  },
+  "locked_environment": {
+    "python": "3.11.9",
+    "rdkit": "2026.9.1",
+    "meeko": "0.8.0",
+    "gemmi": "0.7.5",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "tqdm": "4.70.1"
+  },
+  "meeko_template_file_sha256": "535dc75a2cc5db579a3114090c9ab1273892c556cb7cc1a850ce2c4cd57c7cde",
+  "scope_limitations": [
+    "Only this fixed approved source and instance; not generic cleaning.",
+    "Dry isolated-domain and template protonation assumptions retained.",
+    "No Vina, activity, affinity or independent pose prediction."
+  ]
+}

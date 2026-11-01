@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "exit_code": 1,
+  "read_only": true,
+  "checked_files": 56,
+  "declared_preparation_status": "READY_FOR_03",
+  "scope": "paths, hashes, status and bindings only",
+  "scientific_content_revalidated": false,
+  "issues": [
+    {
+      "code": "HASH_OR_SIZE_MISMATCH",
+      "path": "outputs/ligand.pdbqt"
+    },
+    {
+      "code": "OUTPUT_HASH_OR_PATH_MISMATCH",
+      "role": "ligand"
+    }
+  ]
+}

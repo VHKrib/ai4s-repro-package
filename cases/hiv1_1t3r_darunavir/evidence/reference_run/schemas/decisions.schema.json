@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "decisions",
+  "description": "判据结果。失败原因必须保留，供阶段 02 重新设计时引用。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "candidate_id",
+      "name",
+      "role",
+      "decision",
+      "reviewer_required"
+    ],
+    "properties": {
+      "candidate_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "role": {
+        "enum": [
+          "candidate",
+          "control",
+          "reference"
+        ]
+      },
+      "tier": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          null
+        ]
+      },
+      "composite_score": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0,
+        "maximum": 1
+      },
+      "decision": {
+        "enum": [
+          "advance",
+          "advance_with_flags",
+          "revise",
+          "needs_review",
+          "control_only",
+          "reject"
+        ]
+      },
+      "decision_codes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "decision_reason": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "next_stage": {
+        "enum": [
+          "02",
+          "04",
+          "review",
+          "",
+          null
+        ]
+      },
+      "reviewer_required": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "hard_failures": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "soft_flags": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

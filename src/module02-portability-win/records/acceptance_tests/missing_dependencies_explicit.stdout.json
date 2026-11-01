@@ -1,0 +1,18 @@
+{
+  "status": "FAIL",
+  "exit_code": 1,
+  "job_id": "A4S-02-MODULE-001-MOVED-002",
+  "result": "/private/var/folders/y8/s_tmmyqj05dcbb3dpnknm_2c0000gn/T/A4S MODULE move j09jz474/package with spaces/negative/no_site",
+  "job": "job.json",
+  "stage03_status": "待联调",
+  "code": "MISSING_SCIENTIFIC_DEPENDENCY",
+  "message": "Missing required packages",
+  "missing": [
+    "gemmi",
+    "rdkit",
+    "meeko",
+    "numpy",
+    "scipy",
+    "tqdm"
+  ]
+}

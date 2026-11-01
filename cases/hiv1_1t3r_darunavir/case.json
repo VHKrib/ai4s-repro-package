@@ -1,0 +1,107 @@
+{
+  "schema_version": "a4s.case/1",
+  "case_id": "hiv1_1t3r_darunavir",
+  "title": "HIV-1 protease (1T3R) x darunavir co-crystal redocking",
+  "description": "A complete, self-contained reproduction case: crystal structure -> receptor/ligand preparation -> real AutoDock Vina docking -> redock RMSD check -> stage-3 scoring/decision pipeline. Every number below was produced by a real run on 2026-10-30 and is re-checked by scripts/run_pipeline.py.",
+  "target": {
+    "name": "HIV-1 protease wild-type dimer (1T3R, 1.20 A)",
+    "uniprot": "P04585",
+    "pdb_id": "1T3R",
+    "pdb_source": "RCSB https://files.rcsb.org/download/1T3R.pdb",
+    "chains": ["A", "B"]
+  },
+  "ligand": {
+    "name": "Darunavir (TMC114)",
+    "resname": "017",
+    "pubchem_cid": 213039,
+    "formula": "C27H37N3O7S",
+    "inchikey": "CJBJHOAVZSMMDJ-HEXNFIEUSA-N",
+    "heavy_atoms": 38
+  },
+  "inputs": {
+    "pdb": {
+      "path": "inputs/1T3R.pdb",
+      "sha256": "a53e29c777486fc4d7b8c070d424ac35554ba1ca2ca04f81f64f8dcb4b3a1aad"
+    },
+    "ligand_template_sdf": {
+      "path": "inputs/pubchem_cid213039_3d.sdf",
+      "sha256": "23409e8417228054c9e3811add480e2c96b4ff5d9af0b67adb2e7c3875f840d0",
+      "source": "PubChem CID 213039 3D conformer (bond-order template only; coordinates come from 1T3R)"
+    }
+  },
+  "box": {
+    "method": "co-crystal ligand (017) heavy-atom AABB + 5.0 A padding per axis",
+    "padding_A": 5.0,
+    "center": [19.459, 29.766, 14.159],
+    "size": [20.361, 20.806, 18.122]
+  },
+  "engine": {
+    "name": "vina",
+    "scoring_function": "vina",
+    "binary": "../../tools/vina_1.2.5_win.exe",
+    "binary_sha256": "b5a23b226ee5dc1b028df04082d13a7b0e5b9b12b988bbcf9498cb351e20b38f",
+    "exhaustiveness": 8,
+    "n_poses": 9,
+    "seed": 42,
+    "cpu": 4
+  },
+  "stage3": {
+    "case_id": "hiv1_1t3r_darunavir",
+    "receptor_id": "HIV1_1T3R",
+    "candidate_id": "DRV",
+    "receptor_label": "1T3R HIV-1 protease WT dimer, chains A+B, rigid receptor (meeko PDBQT)",
+    "candidate_name": "Darunavir (1T3R co-crystal ligand 017, TMC114)",
+    "catalytic_selection": [
+      {"resname": "ASP", "resseq": 25, "atoms": ["OD1", "OD2"]}
+    ],
+    "criteria": {
+      "primary_receptor": "HIV1_1T3R",
+      "min_site_overlap": 0.70,
+      "min_catalytic_contacts": 0,
+      "max_clashes": 0,
+      "max_affinity_kcal_mol": -7.0,
+      "min_ligand_efficiency": 0.18,
+      "max_flex_delta": 1.0,
+      "max_consensus_std": 0.08,
+      "require_reference_pass": false,
+      "allow_af3_only_advance": false
+    },
+    "reference_check": {
+      "id": "redock_drv",
+      "type": "redock_rmsd",
+      "threshold": 2.0,
+      "required": true,
+      "impact": "blocks_advance",
+      "note": "Darunavir redock pose recovery vs 1T3R co-crystal 017 (meeko mk_export + RDKit GetBestRMS)"
+    }
+  },
+  "expected": {
+    "n_poses": 9,
+    "affinities_kcal_mol": [-9.958, -9.148, -8.877, -8.782, -8.366, -8.233, -7.946, -7.88, -7.81],
+    "best_affinity_kcal_mol": -9.958,
+    "best_pose_index": 1,
+    "redock_rmsd_A": 0.211,
+    "redock_threshold_A": 2.0,
+    "box_center": [19.459, 29.766, 14.159],
+    "box_size": [20.361, 20.806, 18.122],
+    "protein_atoms": 1496,
+    "receptor_pdbqt_atoms": 1811,
+    "ligand_heavy_atoms": 38,
+    "ligand_pdbqt_atoms": 42,
+    "ligand_torsdof": 14,
+    "stage3_validate_outputs": 10,
+    "stage3_decision": "advance"
+  },
+  "tolerances": {
+    "affinity_kcal_mol": 0.001,
+    "rmsd_A": 0.02,
+    "box_A": 0.002
+  },
+  "reference_run": {
+    "run_id": "t_664138d8_hiv1_darunavir_20261030-224808",
+    "date": "2026-10-30",
+    "note": "Original run this case was extracted from. evidence/stage3_run is a verbatim copy of its stage-3 run directory (used by tests/smoke_test.py for validate without re-docking).",
+    "vina_elapsed_s": 33.93,
+    "stage3_elapsed_s": 34.35
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "stage": "export",
+  "fingerprint": "6b327232fe014edd5066d8c1a3668c5237e5ec9ced789b7290b8e4f3cf97383f",
+  "records": {
+    "reference_check": {
+      "path": "outputs\\reference_check.csv",
+      "sha256": "417e7154a8e7134daf93ee18da563e3387975a2d7eec1d41c164d4a986065875",
+      "rows": 1,
+      "schema": "reference_check"
+    },
+    "pose_metrics": {
+      "path": "outputs\\pose_metrics.csv",
+      "sha256": "04ff14c688890942c62054e6e6efc2cf3bb940b9009b503c893b3790c6933f8c",
+      "rows": 9,
+      "schema": "pose_metrics"
+    },
+    "receptor_matrix": {
+      "path": "outputs\\receptor_matrix.csv",
+      "sha256": "2be75d7721b995f04d34a52d6513aa721283c4453ad03501dc69f700b6025d36",
+      "rows": 1,
+      "schema": "receptor_matrix"
+    },
+    "candidates_ranked": {
+      "path": "outputs\\candidates_ranked.csv",
+      "sha256": "4041d68ac02690709e8ac159f4ba66b2056ad9762ac5d2eb30b4d2e15e5acd0b",
+      "rows": 1,
+      "schema": "candidates_ranked"
+    },
+    "decisions": {
+      "path": "outputs\\decisions.csv",
+      "sha256": "6cf2320eb305a7110aafad0d76c76290496fb17ab3be8721029ad6b6e3fcc7dd",
+      "rows": 1,
+      "schema": "decisions"
+    },
+    "uncertainties": {
+      "path": "outputs\\uncertainties.csv",
+      "sha256": "11e4d4572326e19515d43d3395c5286051d54f608810df1c5ce4d9ea5785fcf6",
+      "rows": 5,
+      "schema": "uncertainties"
+    },
+    "candidates_ranked_jsonl": {
+      "path": "outputs\\candidates_ranked.jsonl",
+      "sha256": "b37b6c9ea472e403904267202fa34155f987433183a35c0fd304d8caad010d93",
+      "rows": 1,
+      "schema": "jsonl"
+    },
+    "decisions_jsonl": {
+      "path": "outputs\\decisions.jsonl",
+      "sha256": "2c34706cf5d34c90fa984c1fc2de60b5aca2a1557e9c073ad70b218f801efd5f",
+      "rows": 1,
+      "schema": "jsonl"
+    },
+    "pose_metrics_jsonl": {
+      "path": "outputs\\pose_metrics.jsonl",
+      "sha256": "87eb012f77cae93ffdc119a9304761d814bfd80388b40cf77ed3113b45b64864",
+      "rows": 9,
+      "schema": "jsonl"
+    },
+    "report": {
+      "path": "outputs\\stage3_report.md",
+      "sha256": "c98a9daf728717f8fdc8755d8811dc003aab785041d3b05381d57a8ee0ba2988",
+      "rows": 0,
+      "schema": "markdown"
+    }
+  }
+}

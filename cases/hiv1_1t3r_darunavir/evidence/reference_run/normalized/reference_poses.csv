@@ -1,0 +1,10 @@
+﻿candidate_id,receptor_id,pose_index,rmsd_to_reference_A,reference_conformer,affinity_kcal_mol
+DRV,HIV1_1T3R,1,0.211,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-9.958
+DRV,HIV1_1T3R,2,2.733,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-9.148
+DRV,HIV1_1T3R,3,2.707,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-8.877
+DRV,HIV1_1T3R,4,3.005,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-8.782
+DRV,HIV1_1T3R,5,3.028,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-8.366
+DRV,HIV1_1T3R,6,2.945,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-8.233
+DRV,HIV1_1T3R,7,2.924,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-7.946
+DRV,HIV1_1T3R,8,1.870,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-7.880
+DRV,HIV1_1T3R,9,1.923,1T3R HETATM 017 co-crystal pose (ligand/cocrystal_pose.sdf),-7.810

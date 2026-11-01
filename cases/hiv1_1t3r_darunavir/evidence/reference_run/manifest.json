@@ -1,0 +1,228 @@
+{
+  "schema_version": "stage3-output/1",
+  "pipeline_version": "stage3/0.1.0",
+  "run_id": "hiv1_1t3r_darunavir-20261030-225324",
+  "case_id": "hiv1_1t3r_darunavir",
+  "target": {
+    "name": "HIV-1 protease WT dimer (1T3R, 1.20 A)",
+    "uniprot": "P04585"
+  },
+  "engine": "vina",
+  "engine_options": {
+    "exhaustiveness": 8,
+    "n_poses": 9,
+    "seed": 42,
+    "cpu": 4,
+    "protocol_suffix": "rigid",
+    "reference_ligand": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\ligand\\cocrystal_pose.sdf",
+    "catalytic_selection": [
+      {
+        "resname": "ASP",
+        "resseq": 25,
+        "atoms": [
+          "OD1",
+          "OD2"
+        ]
+      }
+    ]
+  },
+  "config": {
+    "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\stage3_config_hiv1_1t3r_darunavir.json",
+    "sha256": "8a4dd5da0966e951851253f0374ee760652a0da26bc3d6a1305eb1b94dd846ed"
+  },
+  "inputs": [
+    {
+      "role": "candidates",
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\candidates.csv",
+      "sha256": "f688b81e4a1680506c7d79111f46c9077c05d8cca8dbf2c09a62f8a35f31453d",
+      "rows": 1,
+      "ignored_columns": [],
+      "filled_columns": []
+    },
+    {
+      "role": "receptors",
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\receptors.csv",
+      "sha256": "0a890b4e48c5c1b2db20b6ac842f1d5f79f81747370f532325684fa434803dbf",
+      "rows": 1,
+      "ignored_columns": [],
+      "filled_columns": []
+    },
+    {
+      "role": "poses",
+      "path": null,
+      "sha256": null,
+      "rows": 0
+    },
+    {
+      "role": "panel",
+      "path": null,
+      "sha256": null,
+      "rows": 0
+    },
+    {
+      "role": "reference_poses",
+      "path": "<ORIGINAL_ROOT>\\runs\\t_664138d8_hiv1_darunavir_20261030-224808\\stage3_case\\reference_poses.csv",
+      "sha256": "b0689d9d4e768f0f1c96ff9d6bf807cbdf34ba88e9313831bfae8a8e963a3f90",
+      "rows": 9,
+      "ignored_columns": [],
+      "filled_columns": []
+    }
+  ],
+  "normalized": {
+    "candidates": {
+      "path": "normalized\\candidates.csv",
+      "sha256": "f79228ee324c54f4ed5c9ca85e063b9443941405d1c9c473ba07fba1ce1a8580"
+    },
+    "receptors": {
+      "path": "normalized\\receptors.csv",
+      "sha256": "8bb5bed6e5440fa52919ff7921c627f9205215f56d079409c17f0682bad7d3d2"
+    },
+    "reference_poses": {
+      "path": "normalized\\reference_poses.csv",
+      "sha256": "98bbe13490591c7f904339580c0bcecd65c305553d0a729c55a66dea30b361bb"
+    }
+  },
+  "parameters": {
+    "criteria": {
+      "primary_receptor": "HIV1_1T3R",
+      "min_site_overlap": 0.7,
+      "min_catalytic_contacts": 0,
+      "max_clashes": 0,
+      "max_affinity_kcal_mol": -7.0,
+      "min_ligand_efficiency": 0.18,
+      "max_flex_delta": 1.0,
+      "max_consensus_std": 0.08,
+      "require_reference_pass": false,
+      "allow_af3_only_advance": false
+    },
+    "weights": {
+      "pose": 0.3,
+      "affinity": 0.2,
+      "consistency": 0.2,
+      "developability": 0.15,
+      "resistance": 0.15
+    },
+    "tiers": {
+      "A": 0.7,
+      "B": 0.55
+    },
+    "windows": {
+      "affinity": {
+        "weak": -6.0,
+        "strong": -10.0
+      },
+      "ligand_efficiency": {
+        "weak": 0.15,
+        "strong": 0.35
+      }
+    },
+    "reference_checks": [
+      {
+        "id": "redock_drv",
+        "type": "redock_rmsd",
+        "candidate_id": "DRV",
+        "receptor_id": "HIV1_1T3R",
+        "threshold": 2.0,
+        "required": true,
+        "impact": "blocks_advance",
+        "note": "Darunavir redock pose recovery vs 1T3R co-crystal 017 (meeko mk_export + RDKit GetBestRMS)"
+      }
+    ]
+  },
+  "software": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "pipeline": "stage3/0.1.0",
+    "vina": "1.2.5-shim",
+    "rdkit": null
+  },
+  "reference_status": "pass",
+  "engine_notes": [
+    "Vina exhaustiveness=8, n_poses=9, seed=42"
+  ],
+  "outputs": {
+    "reference_check": {
+      "path": "outputs\\reference_check.csv",
+      "sha256": "417e7154a8e7134daf93ee18da563e3387975a2d7eec1d41c164d4a986065875",
+      "rows": 1,
+      "schema": "reference_check"
+    },
+    "pose_metrics": {
+      "path": "outputs\\pose_metrics.csv",
+      "sha256": "04ff14c688890942c62054e6e6efc2cf3bb940b9009b503c893b3790c6933f8c",
+      "rows": 9,
+      "schema": "pose_metrics"
+    },
+    "receptor_matrix": {
+      "path": "outputs\\receptor_matrix.csv",
+      "sha256": "2be75d7721b995f04d34a52d6513aa721283c4453ad03501dc69f700b6025d36",
+      "rows": 1,
+      "schema": "receptor_matrix"
+    },
+    "candidates_ranked": {
+      "path": "outputs\\candidates_ranked.csv",
+      "sha256": "4041d68ac02690709e8ac159f4ba66b2056ad9762ac5d2eb30b4d2e15e5acd0b",
+      "rows": 1,
+      "schema": "candidates_ranked"
+    },
+    "decisions": {
+      "path": "outputs\\decisions.csv",
+      "sha256": "6cf2320eb305a7110aafad0d76c76290496fb17ab3be8721029ad6b6e3fcc7dd",
+      "rows": 1,
+      "schema": "decisions"
+    },
+    "uncertainties": {
+      "path": "outputs\\uncertainties.csv",
+      "sha256": "11e4d4572326e19515d43d3395c5286051d54f608810df1c5ce4d9ea5785fcf6",
+      "rows": 5,
+      "schema": "uncertainties"
+    },
+    "candidates_ranked_jsonl": {
+      "path": "outputs\\candidates_ranked.jsonl",
+      "sha256": "b37b6c9ea472e403904267202fa34155f987433183a35c0fd304d8caad010d93",
+      "rows": 1,
+      "schema": "jsonl"
+    },
+    "decisions_jsonl": {
+      "path": "outputs\\decisions.jsonl",
+      "sha256": "2c34706cf5d34c90fa984c1fc2de60b5aca2a1557e9c073ad70b218f801efd5f",
+      "rows": 1,
+      "schema": "jsonl"
+    },
+    "pose_metrics_jsonl": {
+      "path": "outputs\\pose_metrics.jsonl",
+      "sha256": "87eb012f77cae93ffdc119a9304761d814bfd80388b40cf77ed3113b45b64864",
+      "rows": 9,
+      "schema": "jsonl"
+    },
+    "report": {
+      "path": "outputs\\stage3_report.md",
+      "sha256": "c98a9daf728717f8fdc8755d8811dc003aab785041d3b05381d57a8ee0ba2988",
+      "rows": 0,
+      "schema": "markdown"
+    }
+  },
+  "schemas": {
+    "candidates": "schemas\\candidates.schema.json",
+    "receptors": "schemas\\receptors.schema.json",
+    "poses": "schemas\\poses.schema.json",
+    "panel": "schemas\\panel.schema.json",
+    "reference_poses": "schemas\\reference_poses.schema.json",
+    "pose_metrics": "schemas\\pose_metrics.schema.json",
+    "receptor_matrix": "schemas\\receptor_matrix.schema.json",
+    "reference_check": "schemas\\reference_check.schema.json",
+    "candidates_ranked": "schemas\\candidates_ranked.schema.json",
+    "decisions": "schemas\\decisions.schema.json",
+    "uncertainties": "schemas\\uncertainties.schema.json"
+  },
+  "elapsed_s": 34.022,
+  "started_at": "2026-10-30T22:53:24+08:00",
+  "finished_at": "2026-10-30T22:53:58+08:00",
+  "interpretation_limits": [
+    "docking score is not measured affinity",
+    "a plausible pose is not evidence of functional inhibition",
+    "AF3 models are static; multiple samples are not a trajectory",
+    "H-bond/salt-bridge counts are geometric proximity, not validated angles",
+    "MD is supplementary and does not replace experiments"
+  ]
+}

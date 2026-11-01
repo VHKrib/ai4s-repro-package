@@ -1,0 +1,6 @@
+﻿uncertainty_id,scope,kind,statement,impact,resolves_with,status
+U-INPUT-001,case,input_warning,未提供突变 panel；一致性与耐药分量按中性值处理,note,补全输入字段后重跑,open
+U-INPUT-002,case,input_warning,['DRV'] 的成药性四项未填全；按中性 0.5 处理并在不确定性表标记,note,补全输入字段后重跑,open
+U-METHOD-DRV,DRV,no_method_comparison,缺少刚性/柔性协议对照，方法一致性按中性 0.5 处理,limits_ranking,补同参数的刚性 panel 或统一协议,open
+U-DEV-DRV,DRV,developability_unassessed,可获得性/可合成性/溶解度/选择性四项都未评估，按中性 0.5 处理,limits_ranking,补供应商目录、逆合成可行性、logS/PSA 与选择性数据,open
+U-PANEL-DRV,DRV,no_mutation_panel,没有突变 panel，耐药负担按中性 0.5 处理,limits_ranking,至少覆盖已知耐药位点的柔性侧链对接,open
