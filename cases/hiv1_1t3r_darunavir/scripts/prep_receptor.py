@@ -16,8 +16,21 @@ from collections import defaultdict
 from pathlib import Path
 
 PY = Path(sys.executable)
+
+def _find_cli(name: str) -> Path:
+    """Locate a console script whether Python lives in a venv or a system root."""
+    import os, shutil
+    exe = name + (".exe" if os.name == "nt" else "")
+    cands = [shutil.which(name), shutil.which(exe),
+             Path(sys.executable).parent / exe,
+             Path(sys.executable).parent / "Scripts" / exe]
+    for c in cands:
+        if c and Path(c).exists():
+            return Path(c)
+    raise SystemExit(f"{name} not found (looked in PATH and next to {sys.executable})")
+
 SCRIPTS = PY.parent
-MK_RECEPTOR = SCRIPTS / "mk_prepare_receptor.exe"
+MK_RECEPTOR = _find_cli("mk_prepare_receptor")
 
 pdb_path = Path(sys.argv[1])
 rundir = Path(sys.argv[2])

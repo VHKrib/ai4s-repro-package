@@ -18,7 +18,7 @@ from rdkit import Chem
 from rdkit.Chem import rdDetermineBonds, rdMolDescriptors
 from rdkit.Chem.inchi import MolToInchiKey
 
-MK_LIGAND = Path(sys.executable).parent / "mk_prepare_ligand.exe"
+MK_LIGAND = _find_cli("mk_prepare_ligand")
 
 pdb_path = Path(sys.argv[1])
 tmpl_path = Path(sys.argv[2])
