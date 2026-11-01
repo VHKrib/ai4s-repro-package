@@ -18,6 +18,18 @@ from rdkit import Chem
 from rdkit.Chem import rdDetermineBonds, rdMolDescriptors
 from rdkit.Chem.inchi import MolToInchiKey
 
+def _find_cli(name: str) -> Path:
+    """Locate a console script whether Python lives in a venv or a system root."""
+    import os, shutil
+    exe = name + (".exe" if os.name == "nt" else "")
+    cands = [shutil.which(name), shutil.which(exe),
+             Path(sys.executable).parent / exe,
+             Path(sys.executable).parent / "Scripts" / exe]
+    for c in cands:
+        if c and Path(c).exists():
+            return Path(c)
+    raise SystemExit(f"{name} not found (looked in PATH and next to {sys.executable})")
+
 MK_LIGAND = _find_cli("mk_prepare_ligand")
 
 pdb_path = Path(sys.argv[1])
